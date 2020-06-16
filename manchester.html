@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!--<base href="https://www.justinhadad.com/" target="_blank"> -->
+
+    <title>justin hadad</title>
+    <!-- Keywords used in the website -->
+    <meta name="keywords" content="Justin Hadad, UNCUT, University of North Carolina at Chapel Hill, Physics, Economics, game theory, contact, Wage, Columbus Ohio, UNC, St Charles Prep">
+    
+    <!-- Description for Website -->
+    <meta name="description" content="I'm a student at the University of North Carolina at Chapel Hill studying physics (applied), economics (game theory), and Latin (reader-response).">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        
+  </head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+* {box-sizing: border-box}
+body {
+  font-family: "Open Sans", sans-serif;
+  text-justify: inter-word;
+  font-size: 11pt;
+}
+button {font-family: 'Charter'; font-size: 20px;}
+
+ul {
+  list-style-type: square;
+  lighting-color: black;
+  color: black;
+  margin: 20px;
+  padding: 0px;
+}
+
+cite {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.ami div {display:none}
+.ami:hover div {display:block}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+/* Style the header */
+
+.header {
+  padding-left: 100px;
+  text-align: justify;
+  background: white;
+  color: black;
+  font-size: 15px;
+}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1.5px groove #99badd;
+  border-color: #99badd; /*mess*/
+  background-color: #041d4f;
+  width: 10;
+  height: 100%;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: #590404;
+  color: white;
+  padding: 8px 8px;
+  width: 100%;
+  outline: black;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+  border-color: groove black
+  font-weight: 900;
+}
+
+/* Change background color of buttons on hover */
+/*.tab button:hover {
+  background-color: #ddd;
+} */
+
+/* Create an active/current "tab button" class 
+.tab button.active {
+  background-color: #ccc;
+}
+*/
+
+
+
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 2px ;
+  width: 50%;
+  max-width: 500px; /* this is the width of page */
+  border-left: none;
+  height: 300px;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+  .tabcontent {
+    max-width: 1000px;
+  }
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>justin hadad</h1>
+</div>
+
+
+<div class="tab">
+  <a href= "index.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'home')" id="defaultOpen">home</button></a>
+  <a href="about.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'about')">about</button></a>
+  <a href ="experience.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'experience')">experience</button></a>
+  <a href ="essays.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'essays')">essays</button></a>
+  <a href ="quotes.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'quotes')">quotes</button></a>
+  <button class="tablinks" onclick="window.location.href='https://www.uncutchapelhill.com'">UNCUT</button>
+  <!--<a href ="wage.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'Wage')">Wage</button></a>-->
+  <a href ="contact.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'contact')">contact</button></a>
+
+</div>
+
+<div id="manchester" class="tabcontent">
+
+  <h3> Dead link! Turn around!</h3>
+
+   
+</body>
+</html> 

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!--<base href="https://www.justinhadad.com/" target="_blank"> -->
+
+    <title>justin hadad</title>
+    <!-- Keywords used in the website -->
+    <meta name="keywords" content="Justin Hadad, UNCUT, University of North Carolina at Chapel Hill, Physics, Economics, game theory, Wage, Columbus Ohio, UNC, St Charles Prep">
+    
+    <!-- Description for Website -->
+    <meta name="description" content="I'm a student at the University of North Carolina at Chapel Hill studying physics (applied), economics (game theory), and Latin (reader-response).">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        
+  </head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+* {box-sizing: border-box}
+body {
+  font-family: "Open Sans", sans-serif;
+  text-justify: inter-word;
+  font-size: 11pt;
+}
+button {font-family: 'Charter'; font-size: 20px;}
+
+ul {
+  list-style-type: square;
+  lighting-color: black;
+  color: black;
+  margin: 20px;
+  padding: 0px;
+}
+
+cite {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.ami div {display:none}
+.ami:hover div {display:block}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Style the header */
+
+.header {
+  padding-left: 100px;
+  text-align: justify;
+  background: white;
+  color: black;
+  font-size: 15px;
+}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1.5px groove #99badd;
+  border-color: #99badd; /*mess*/
+  background-color: #041d4f;
+  width: 10;
+  height: 100%;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: #590404;
+  color: white;
+  padding: 8px 8px;
+  width: 100%;
+  outline: black;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+  border-color: groove black
+  font-weight: 900;
+}
+
+/* Change background color of buttons on hover */
+/*.tab button:hover {
+  background-color: #ddd;
+} */
+
+/* Create an active/current "tab button" class 
+.tab button.active {
+  background-color: #ccc;
+}
+*/
+
+
+
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 2px ;
+  width: 50%;
+  max-width: 500px; /* this is the width of page */
+  border-left: none;
+  height: 300px;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+  .tabcontent {
+    max-width: 1000px;
+  }
+}
+
+
+a:link{
+  color:blue;
+}
+
+
+a:visited{
+  color:gray;
+}
+
+p {
+  text-justify: inter-word;
+}
+
+h4 { 
+  color: #4B9CD3;
+  text-align: right;
+ }
+
+ hr {
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.vr {
+    width:1px;
+    background-color:#000;
+    position:absolute;
+    left:10px;
+    text-align: center;
+    margin-left: 105px;
+    height: 28px;
+}
+
+
+
+</style>
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>justin hadad</h1>
+</div>
+
+<div class="tab">
+  <a href= "index.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'home')" id="defaultOpen">home</button></a>
+  <a href="about.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'about')">about</button></a>
+  <a href ="experience.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'experience')">experience</button></a>
+  <a href ="essays.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'essays')">essays</button></a>
+  <a href ="quotes.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'quotes')">quotes</button></a>
+  <button class="tablinks" onclick="window.location.href='https://www.uncutchapelhill.com'">UNCUT</button>
+  <!--<a href ="wage.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'Wage')">Wage</button></a>-->  <a href ="contact.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'contact')">contact</button></a>
+
+</div>
+
+<div id="experience" class="tabcontent">
+  <h3>experience</h3>
+
+  <h4> summary </h4>
+  <p>I’m an undergraduate at the University of North Carolina at Chapel Hill. I'm studying for a B.S. in economics with a second major in "Applied Physics," a combination of physics, math, and computer science that I designed myself. A minor in Latin accompanies.</p>
+
+
+  <!--<p> I’m intrigued by most things, a phenomenon which I imagine everyone who specializes either never wanted or simply suppressed. I don’t know if specialization is better, though I imagine that those who do don’t often ask the question “What am I <em>really</em> good at?”</p>-->
+
+  <p>I am particularly enabled to explore many different things because of my enrollment in the <a href = "https://www.moreheadcain.org"> Morehead-Cain program</a>. The first merit scholarship in the U.S., it accepts 3% of applicants, and fully funds a four-year educational experience, including summer enrichment, personal discovery, and outdoor leadership. Because of the program, I have been able to study <a href = "manchester.html"> classics in Manchester</a>, <a href = "rome.html">poetry in Rome</a>, and <a href = "france.html">  nuclear fusion in France</a>, among other things.
+
+
+  <!--  <a href = "bikes.html">bikes </a> and <a href = "carbon.html">3D printing in California</a>, and <a href = "louisville.html">business policy in Kentucky</a> (I had to break theme somewhere).</p> -->
+
+<!--<p> Click on the logos below to learn more about each project, or to find the relevant site.</p>-->
+<p> Currently, as you might have seen from above, the clickable links for further exploration are disabled. Like the <a href = "essays.html">essays</a>, this is on my to-do list. </p>
+
+
+
+  <h4> big projects</h3>
+
+<div class="vr">&nbsp;</div>
+ <a href = "uncut.html"> <img src = uncut.png alt ="" style ="max-width: 75px; margin-left: 10px"></a>
+<p> UNCUT is a 501(c)(3) student-athlete storytelling platform that shines a light on the human side of college athletes. </p>
+
+<p> I co-founded UNCUT in September 2019. Since then, we’ve added added 28 team members, amassed 70K+ content views and 4K+ followers across seven platforms, and have had content featured on <a href = "https://www.espn.com/college-football/story/_/id/28987224/how-former-north-carolina-ol-helped-build-app-college-football-playbooks"> ESPN </a>, <a href = "https://www.instagram.com/p/B3I4-HhAo5J/"> Bleacher Report </a>, the <a href  = "https://www.youtube.com/watch?v=tI47FN2RrG4"> Sports Shop Radio </a>, (a second time with Terrell Owens, Tim Brown, and myself, but that was taken down), and more. </p>
+
+<div class="vr" style="height: 40px">&nbsp;</div>
+<a href = "wage.html"> <img src = wage.png alt ="" style ="max-width: 75px; max-height: 40px; margin-left: 15px"></a>
+
+<p> Wage is a scheduling software merging machine learning and economic theory to solve inefficiences in the workplace. </p>
+
+<p> I started Wage in June 2018. I presented the company at Uber Headquarters in April 2019. The software incorporates various elements of welfare economics and labor, social choice, and auction theory. The purpose of the app is to let employees schedule themselves, and in turn, making them and the employers happier than they would be otherwise.</p>  
+
+
+
+  <h4> summers </h3>
+
+<div class="vr">&nbsp;</div>
+<img src = bolt.png alt ="" style ="max-width: 75px; max-height: 40px; margin-left: 10px">
+
+<p> Bolt Bikes are electric bikes that optimize delivery time for food couriers. </p>
+
+<p> I'm spending a few weeks of the hectic, historic summer 2020 at Bolt Bikes. More information soon!</p>  
+
+
+<div class="vr" style="height: 20px; margin-top: 5px" >&nbsp;</div>
+<a href = "carbon.html"> <img src = carbon.png alt ="" style ="max-width: 75px; max-height: 40px; margin-top: 5px; margin-left: 15px"></a>
+
+<p> Carbon is a digital manufacturing company using 3D printers to bring ideas to market faster. </p>
+
+<p> I spent the summer of 2019 at Carbon, where I worked on some cool data projects, explored San Francisco, and 3D printed a replica 12th Lewis chessmen set.</p>  
+
+
+<div class="vr" style = "margin-top: 5px">&nbsp;</div>
+<a href = "louisville.html"> <img src = louisville.png alt ="" style ="margin-top: 5px; max-width: 75px; max-height: 40px; margin-left: 10px"></a>
+
+<p> Louisville Forward is the city government of Louisville, KY. </p>
+
+<p> In summer 2018, three other Morehead-Cain Scholars and I designed immigrant financial policy by studying the values of business owners in unity with political theory.</p>  
+
+
+
+
+
+
+
+
+
+<h4> other projects </h3>
+
+<div class="vr" style="height: 20px">&nbsp;</div><p style="font-size:15px; font-family: Capitals; margin-left: 15px">Game Show Theory</p>
+
+<p> In spring 2020, I taught SPCL 400, which covered personal and mentored research in game theory, mechanism design, auctions, social choice, optimal stopping, large numbers, and more. 
+
+<p> The single most fulfilling thing I've ever done. One student wrote anonymously, "I've never had a professor care so much about whether student's learned, and who devoted significant time and sacrifice to ensure that students performed to best of their abilities."</p>  
+
+
+
+
+<div class="vr">&nbsp;</div><a href = "https://parrcenter.unc.edu/"> <img src = parr.png alt ="" style ="max-width: 100px; max-height: 40px; margin-left: 15px"></a>
+
+<p> The Parr Center for Ethics is one of the nation's leading research facilities and cohorts for ethics, philosophy, and politics. 
+
+<p> I lead a team of five students in developing an educational software that tells users their "ethical code" based on a series of questions and games. If you were wondering, I classify as a non-consequentialist, primarily valuing fairness.</p>  
+
+
+
+
+
+
+
+
+
+  <!--<p> For a condensed version of my experience, you can find my résumé <a href="/Users/justin/Documents/Resume/Hadad Resume.pdf" > here</a>.</p> -->
+
+  <hr>
+
+</div>
+
+
+
+</body>
+</html> 
+
+
+

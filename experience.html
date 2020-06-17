@@ -9,7 +9,7 @@
     <meta name="keywords" content="Justin Hadad, experience, UNCUT, University of North Carolina at Chapel Hill, Physics, Economics, game theory, Wage, Columbus Ohio, UNC, St Charles Prep">
     
     <!-- Description for Website -->
-    <meta name="description" content="I'm a student at UNC studying for a B.S. in economics with a second major in Applied Physics, a combination of physics, math, and computer science. A minor in Latin accompanies.">
+    <meta name="description" content="Justin Hadad has experience in software startups, hardware design, public policy, product development, research, and teaching.">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         
@@ -186,15 +186,175 @@ cite {
   height: 300px;
 }
 
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
+#content-desktop {display: block;}
+#content-mobile {display: none;}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 600px) {
+  #content-desktop {display: none;}
+  #content-mobile {display: block;}
   .modal-content {
     width: 100%;
   }
   .tabcontent {
-    max-width: 1000px;
+    float: left;
+    padding: 0px 12px;
+    border: 2px ;
+    width: 100%;
+    max-width: 500px; /* this is the width of page */
+    border-left: none;
+    height: 300px;
   }
+
+body {
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+
+
+.container {
+  margin-top: 50px; 
+  Display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phone {
+  background-color: #36383F;
+  border-radius: 40px;
+  width: 100%;
+  height: 600px;
+  Display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 30px 50px 100px #85888C;
+}
+.content {
+  border: 1px solid #36383F;
+  border-radius: 20px;
+  width: 100%;
+  height: 91%;
+  background-color: white;
+  overflow: hidden;
+}
+nav {
+  background-color: black;
+  height: 65px;
+
+}
+
+
+#menuToggle {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 25px;
+  left: 25px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: flex;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menuToggle span
+{
+  display: flex;
+  width: 29px;
+  height: 2px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #ffffff;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 5px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-3px, -1px);
+  background: black;
+}
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 180px;
+  height: 430px;
+  box-shadow: 0 0 10px #99badd;
+  margin: -50px 0 0 -50px;
+  padding: 50px;
+  padding-top: 80px;
+  background-color: white;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+}
+
+#menu li
+{
+  padding: 8px 0;
+  transition-delay: 2s;
+
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+button {
+  font-family: "Open Sans", sans-serif;
+  text-justify: inter-word;
+  font-size: 13pt;
+  color: black;
+  background-color: white;
+  margin-top: 0px;
+}
+
+} /* MOBILE ENDS HERE
+
+
 
 
 /* A link that has not been visited */
@@ -240,11 +400,11 @@ h4 {
 </head>
 <body>
 
-<div class="header">
+<div id = "content-desktop" class="header">
   <h1>justin hadad</h1>
 </div>
 
-<div class="tab">
+<div id="content-desktop" class="tab">
   <a href= "index.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'home')" id="defaultOpen">home</button></a>
   <a href="about.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'about')">about</button></a>
   <a href ="experience.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'experience')">experience</button></a>
@@ -254,6 +414,28 @@ h4 {
   <!--<a href ="wage.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'Wage')">Wage</button></a>-->  <a href ="contact.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'contact')">contact</button></a>
 
 </div>
+
+
+   <div id = "content-mobile" class="container">
+          
+          <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+            <ul id="menu">
+<li><a href= "index.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'home')" id="defaultOpen">home</button></a></li>
+  <li><a href="about.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'about')">about</button></a></li>
+  <li><a href ="experience.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'experience')">experience</button></a></li>
+  <li><a href ="essays.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'essays')">essays</button></a></li>
+  <li><a href ="quotes.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'quotes')">quotes</button></a></li>
+  <li><button class="tablinks" onclick="window.location.href='https://www.uncutchapelhill.com'">UNCUT</button>
+  <!--<a href ="wage.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'Wage')">Wage</button></a>-->  <li><a href ="contact.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'contact')">contact</button></a></li>
+            </ul>
+           </div>
+          </nav>
+    </div>
 
 <div id="experience" class="tabcontent">
   <h3>experience</h3>
@@ -278,13 +460,13 @@ h4 {
 
   <h4> big projects</h3>
 
-<div class="vr">&nbsp;</div>
+<div class="vr" id="content-desktop">&nbsp;</div>
  <a href = "uncut.html"> <img src = uncut.png alt ="" style ="max-width: 75px; margin-left: 10px"></a>
 <p> UNCUT is a 501(c)(3) student-athlete storytelling platform that shines a light on the human side of college athletes. </p>
 
 <p> We launched UNCUT in September 2019. Since then, we’ve added added 28 team members, amassed 70K+ content views and 4K+ followers across seven platforms, and have had content featured on <a href = "https://www.espn.com/college-football/story/_/id/28987224/how-former-north-carolina-ol-helped-build-app-college-football-playbooks">ESPN</a>, <a href = "https://www.instagram.com/p/B3I4-HhAo5J/">Bleacher Report</a>, the <a href  = "https://www.youtube.com/watch?v=tI47FN2RrG4">Sports Shop Radio</a>, (a second time with Terrell Owens, Tim Brown, and myself, but that was taken down), and more. </p>
 
-<div class="vr" style="height: 40px">&nbsp;</div>
+<div class="vr" style="height: 40px" id="content-desktop">&nbsp;</div>
 <a href = "wage.html"> <img src = wage.png alt ="" style ="max-width: 75px; max-height: 40px; margin-left: 15px"></a>
 
 <p> Wage is a scheduling software merging machine learning and economic theory to solve inefficiences in the workplace. </p>
@@ -295,7 +477,7 @@ h4 {
 
   <h4> summers </h3>
 
-<div class="vr">&nbsp;</div>
+<div class="vr" id="content-desktop">&nbsp;</div>
 <img src = bolt.png alt ="" style ="max-width: 75px; max-height: 40px; margin-left: 10px">
 
 <p> Bolt Bikes are electric bikes that optimize delivery time for food couriers. </p>
@@ -303,15 +485,15 @@ h4 {
 <p> I'm spending a few weeks of the hectic, historic summer of 2020 at Bolt Bikes. More information soon!</p>  
 
 
-<div class="vr" style="height: 20px; margin-top: 5px" >&nbsp;</div>
+<div class="vr" id="content-desktop" style="height: 20px; margin-top: 5px" >&nbsp;</div>
 <a href = "carbon.html"> <img src = carbon.png alt ="" style ="max-width: 75px; max-height: 40px; margin-top: 5px; margin-left: 15px"></a>
 
 <p> Carbon is a digital manufacturing company using 3D printers to bring ideas to market faster. </p>
 
-<p> I spent the summer of 2019 at Carbon, where I worked on some cool data projects, explored San Francisco, and 3D printed a replica 12th century Lewis chessmen set.</p>  
+<p> I spent the summer of 2019 at Carbon, where I worked on some cool data projects, explored San Francisco, and 3D printed a replica 12<sup>th</sup> century Lewis chessmen set.</p>  
 
 
-<div class="vr" style = "margin-top: 5px">&nbsp;</div>
+<div id="content-desktop" class="vr" style = "margin-top: 5px">&nbsp;</div>
 <a href = "louisville.html"> <img src = louisville.png alt ="" style ="margin-top: 5px; max-width: 75px; max-height: 40px; margin-left: 10px"></a>
 
 <p> Louisville Forward is the city government of Louisville, KY. </p>
@@ -328,7 +510,7 @@ h4 {
 
 <h4> other projects </h3>
 
-<div class="vr" style="height: 20px">&nbsp;</div><p style="font-size:15px; font-family: Capitals; margin-left: 15px">Game Show Theory</p>
+<div id="content-desktop" class="vr" style="height: 20px">&nbsp;</div><p style="font-size:15px; font-family: Capitals; margin-left: 15px">Game Show Theory</p>
 
 <p> In spring 2020, I taught SPCL 400, which covered personal and mentored research in game theory, mechanism design, auctions, social choice, optimal stopping, large numbers, and more. 
 
@@ -337,7 +519,7 @@ h4 {
 
 
 
-<div class="vr">&nbsp;</div><a href = "https://parrcenter.unc.edu/"> <img src = parr.png alt ="" style ="max-width: 100px; max-height: 40px; margin-left: 15px"></a>
+<div id="content-desktop" class="vr">&nbsp;</div><a href = "https://parrcenter.unc.edu/"> <img src = parr.png alt ="" style ="max-width: 100px; max-height: 40px; margin-left: 15px"></a>
 
 <p> The Parr Center for Ethics is one of the nation's leading research facilities and cohorts for ethics, philosophy, and politics. 
 

@@ -421,12 +421,49 @@ blockquote { margin-left: 50px }
           </nav>
     </div>
 
-<div id = "nonsense" class="tabcontent">
-  <h3>woah! a dead link</h3>
+<div id="contact" class="tabcontent">
+  <h3>contact</h3>
+
+    <p>For my very private contact information that is very hard to find elsewhere: </p>
+
+    <p>Interestingly, a lot of literature in phyllotaxy, the study of the arrangement of leaves on a stem, includes the Fibonacci sequence. What is the sum of the first five numbers of the Fibonacci sequence?</p>
+
+
+
+
+  <input type="text" id="test">
+  <input type="button" value="Submit" onclick="z()"><span id="err"></span>
+  <p></p>
+
+
+    <a style="color:black; text-decoration:none" class=ami>Need a hint? <div>1, 1, 2, 3, ...</div></a>
 
 
 
 </div>
+
+</div>
+
+<script>
+
+var questions = ["An incredible amount of literature in phyllotaxy, the study of the arrangement of leaves on a stem, includes the Fibonacci sequence. What is the sum of the first four numbers of the Fibonacci sequence?", "An incredible amount of literature in phyllotaxy, the study of the arrangement of leaves on a stem, includes the Fibonacci sequence. What is the sum of the first five numbers of the Fibonacci sequence?", "An incredible amount of literature in phyllotaxy, the study of the arrangement of leaves on a stem, includes the Fibonacci sequence. What is the sum of the first six numbers of the Fibonacci sequence?","An incredible amount of literature in phyllotaxy, the study of the arrangement of leaves on a stem, includes the Fibonacci sequence. What is the sum of the first seven numbers of the Fibonacci sequence?"]
+
+var random1 = Math.floor(Math.random() * questions.length) ;
+var choice1 = questions[random1];
+</script>
+
+<script>
+function z() {
+    var a=document.getElementById("test");
+    if((a.value=="12")||(a.value=="twelve")) {
+      document.getElementById('err').innerHTML= "<br />" + "<br />" + 'justinghadad@gmail.com' + "<br />" + " +1 614 787 8416"
+    }
+    else { 
+      document.getElementById('err').innerHTML= "<br />" + "<br />" + "Try again!";
+    }
+}
+
+
+</script>
 </body>
 </html> 
-

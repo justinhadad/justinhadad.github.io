@@ -25,6 +25,35 @@ body {
 }
 button {font-family: 'Charter'; font-size: 20px;}
 
+.accordion {
+  background-color: white;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  /*transition: 0.4s;*/
+  color: #4B9CD3;
+  text-align: right;
+  display: block;
+  margin-top: 1.33em;
+  margin-bottom: 1.33em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.active, .accordion:hover {
+  background-color: #e8e8e8; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
 ul {
   list-style-type: square;
   lighting-color: black;
@@ -184,6 +213,7 @@ cite {
   max-width: 500px; /* this is the width of page */
   border-left: none;
   height: 300px;
+  text-align:justify
 }
 
 #content-desktop {display: block;}
@@ -443,49 +473,43 @@ h4 {
 <p> [Disclaimer: currently, many of the links are disabled. Like the <a href = "essays.html">essays</a>, reworking these is on my to-do list.] </p>
 
 
-  <h4> summary </h4>
-  <p>I'm studying for a B.S. in economics with a second major in "Applied Physics," a combination of physics, math, and computer science that I designed myself. A minor in Latin accompanies.</p>
+<button class="accordion">summary</button>
+<div class="panel">
+<p>I'm studying for a B.S. in economics with a second major in "Applied Physics," a combination of physics, math, and computer science that I designed myself. A minor in Latin accompanies.</p>
 
 
   <!--<p> I’m intrigued by most things, a phenomenon which I imagine everyone who specializes either never wanted or simply suppressed. I don’t know if specialization is better, though I imagine that those who do don’t often ask the question “What am I <em>really</em> good at?”</p>-->
 
   <p>I am particularly enabled to explore many different things because of my enrollment in the <a href = "https://www.moreheadcain.org"> Morehead-Cain program</a>. The first merit scholarship in the U.S., it accepts 3% of applicants, and fully funds a four-year educational experience, including summer enrichment, personal discovery, and outdoor leadership. Because of the program, I have been able to study <a href = "manchester.html"> classics in Manchester</a>, <a href = "rome.html">poetry in Rome</a>, and <a href = "iter.html">  nuclear fusion in France</a>, among other things.
+</div>
 
-
-  <!--  <a href = "bikes.html">bikes </a> and <a href = "carbon.html">3D printing in California</a>, and <a href = "louisville.html">business policy in Kentucky</a> (I had to break theme somewhere).</p> -->
-
-<!--<p> Click on the logos below to learn more about each project, or to find the relevant site.</p>-->
-
-
-
-  <h4> big projects</h3>
-
-<div class="vr" id="content-desktop">&nbsp;</div>
+<button class="accordion">big projects</button>
+<div class="panel">
+  <!--<div class="vr" id="content-desktop">&nbsp;</div>-->
  <a href = "uncut.html"> <img src = uncut.png alt ="" style ="max-width: 75px; margin-left: 10px"></a>
 <p> UNCUT is a 501(c)(3) student-athlete storytelling platform that shines a light on the human side of college athletes. </p>
 
 <p> We launched UNCUT in September 2019. Since then, we’ve added added 28 team members, amassed 70K+ content views and 4K+ followers across seven platforms, and have had content featured on <a href = "https://www.espn.com/college-football/story/_/id/28987224/how-former-north-carolina-ol-helped-build-app-college-football-playbooks">ESPN</a>, <a href = "https://www.instagram.com/p/B3I4-HhAo5J/">Bleacher Report</a>, the <a href  = "https://www.youtube.com/watch?v=tI47FN2RrG4">Sports Shop Radio</a>, (a second time with Terrell Owens, Tim Brown, and myself, but that was taken down), and more. </p>
 
-<div class="vr" style="height: 40px" id="content-desktop">&nbsp;</div>
+<!--<div class="vr" style="height: 40px" id="content-desktop">&nbsp;</div>-->
 <a href = "wage.html"> <img src = wage.png alt ="" style ="max-width: 75px; max-height: 40px; margin-left: 15px"></a>
 
 <p> Wage is a scheduling software merging machine learning and economic theory to solve inefficiences in the workplace. </p>
 
 <p> I started Wage in June 2018, and presented the company at Uber Headquarters in April 2019. The software incorporates various elements of welfare economics and labor, social choice, and auction theory. The purpose of the app is to let employees schedule themselves, and in turn, making them and the employers happier than they would be otherwise.</p>  
+</div>
 
-
-
-  <h4> summers </h3>
-
-<div class="vr" id="content-desktop">&nbsp;</div>
+<button class="accordion">summers</button>
+<div class="panel">
+<!--<div class="vr" id="content-desktop">&nbsp;</div>-->
 <img src = bolt.png alt ="" style ="max-width: 75px; max-height: 40px; margin-left: 10px">
 
 <p> Bolt Bikes are electric bikes that optimize delivery time for food couriers. </p>
 
-<p> I'm spending a few weeks of the hectic, historic summer of 2020 at Bolt Bikes. More information soon!</p>  
+<p> I'm spending a few weeks of the hectic, historic summer of 2020 working on an economics project at Bolt Bikes. More information soon!</p>  
 
 
-<div class="vr" id="content-desktop" style="height: 20px; margin-top: 5px" >&nbsp;</div>
+<!--<div class="vr" id="content-desktop" style="height: 20px; margin-top: 5px" >&nbsp;</div>-->
 <a href = "carbon.html"> <img src = carbon.png alt ="" style ="max-width: 75px; max-height: 40px; margin-top: 5px; margin-left: 15px"></a>
 
 <p> Carbon is a digital manufacturing company using 3D printers to bring ideas to market faster. </p>
@@ -493,24 +517,18 @@ h4 {
 <p> I spent the summer of 2019 at Carbon, where I worked on some cool data projects, explored San Francisco, and 3D printed a replica 12<sup>th</sup> century Lewis chessmen set.</p>  
 
 
-<div id="content-desktop" class="vr" style = "margin-top: 5px">&nbsp;</div>
+<!--div id="content-desktop" class="vr" style = "margin-top: 5px">&nbsp;</div>-->
 <a href = "louisville.html"> <img src = louisville.png alt ="" style ="margin-top: 5px; max-width: 75px; max-height: 40px; margin-left: 10px"></a>
 
 <p> Louisville Forward is the city government of Louisville, KY. </p>
 
 <p> In summer 2018, three other Morehead-Cain Scholars and I designed immigrant financial policy by studying the values of business owners in unity with political theory.</p>  
 
+</div>
 
-
-
-
-
-
-
-
-<h4> other projects </h3>
-
-<div id="content-desktop" class="vr" style="height: 20px">&nbsp;</div><p style="font-size:15px; font-family: Capitals; margin-left: 15px">Game Show Theory</p>
+<button class="accordion">other projects</button>
+<div class="panel">
+<!--  <div id="content-desktop" class="vr" style="height: 20px">&nbsp;</div>--><p style="font-size:15px; font-family: Capitals; margin-left: 15px">Game Show Theory</p>
 
 <p> In spring 2020, I taught SPCL 400, which covered personal and mentored research in game theory, mechanism design, auctions, social choice, optimal stopping, large numbers, and more. 
 
@@ -519,27 +537,51 @@ h4 {
 
 
 
-<div id="content-desktop" class="vr">&nbsp;</div><a href = "https://parrcenter.unc.edu/"> <img src = parr.png alt ="" style ="max-width: 100px; max-height: 40px; margin-left: 15px"></a>
+<!--<div id="content-desktop" class="vr">&nbsp;</div><a href = "https://parrcenter.unc.edu/"> --><img src = parr.png alt ="" style ="max-width: 100px; max-height: 40px; margin-left: 15px"></a>
 
 <p> The Parr Center for Ethics is one of the nation's leading research facilities and cohorts for ethics, philosophy, and politics. 
 
-<p> I lead a team of five students in developing an educational software that tells users their "ethical code" based on a series of questions and games. If you were wondering, I classify as a non-consequentialist, primarily valuing fairness.</p>  
-
-
-
-
-
+<p style = "margin-bottom: 100px"> I lead a team of five students in developing an educational software that tells users their "ethical code" based on a series of questions and games. If you were wondering, I classify as a non-consequentialist, primarily valuing fairness.</p>  
 
 
 
 
   <!--<p> For a condensed version of my experience, you can find my résumé <a href="/Users/justin/Documents/Resume/Hadad Resume.pdf" > here</a>.</p> -->
+</div>
 
-  <hr>
+
+
+
+  <!--  <a href = "bikes.html">bikes </a> and <a href = "carbon.html">3D printing in California</a>, and <a href = "louisville.html">business policy in Kentucky</a> (I had to break theme somewhere).</p> -->
+
+<!--<p> Click on the logos below to learn more about each project, or to find the relevant site.</p>-->
+
+
+ <!-- <hr> -->
 
 </div>
 
 
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+<script>
+  acc[0].click(); // <-- Invoke the onClick for the first tab.
+</script>
 
 </body>
 </html> 

@@ -4,17 +4,18 @@
 
     <!--<base href="https://www.justinhadad.com/" target="_blank"> -->
 
-    <title>essays</title>
+    <title>about</title>
     <!-- Keywords used in the website -->
     <meta name="keywords" content="Justin Hadad, UNCUT, University of North Carolina at Chapel Hill, Physics, Economics, game theory, Wage, Columbus Ohio, UNC, St Charles Prep">
     
     <!-- Description for Website -->
-    <meta name="description" content="I've publicized a few essays that I've written in the past few years.">
+    <meta name="description" content="Justin Hadad is an undergraduate at UNC studying for a B.S. in economics with a second major in Applied Physics, a combination of physics, math, and computer science.">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         
   </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
 * {box-sizing: border-box}
 body {
@@ -26,15 +27,103 @@ button {font-family: 'Charter'; font-size: 20px;}
 
 ul {
   list-style-type: square;
+  lighting-color: black;
+  color: black;
   margin: 20px;
   padding: 0px;
-  line-height: 1.5;
 }
 
 cite {
   font-style: italic;
   font-size: 14px;
 }
+
+.ami div {display:none}
+.ami:hover div {display:block}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 90%;
+  max-width: 1000px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 85%;
+  max-width: 900px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 
 /* Style the header */
 
@@ -84,19 +173,6 @@ cite {
 */
 
 
-/* A link that has not been visited */
-a:link {
-    color: blue;
-}
-/* A link that has been visited */
-a:visited {
-    color: blue;
-}
-/* A link that is hovered on */
-a:hover {
-    color: red;
-}
-
 
 
 /* Style the tab content */
@@ -108,6 +184,7 @@ a:hover {
   max-width: 500px; /* this is the width of page */
   border-left: none;
   height: 300px;
+  text-align:justify
 }
 
 #content-desktop {display: block;}
@@ -278,6 +355,20 @@ button {
 
 } /* MOBILE ENDS HERE
 
+/* A link that has not been visited */
+a:link {
+    color: blue;
+}
+/* A link that has been visited */
+a:visited {
+    color: blue;
+}
+/* A link that is hovered on */
+a:hover {
+    color: red;
+}
+
+
 
 </style>
 </style>
@@ -285,7 +376,7 @@ button {
 <body>
 
 <div id = "content-desktop" class="header">
-  <h1>essays</h1>
+  <h1>justin hadad</h1>
 </div>
 
 <div id="content-desktop" class="tab">
@@ -314,35 +405,46 @@ button {
   <li><a href ="experience.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'experience')">experience</button></a></li>
   <li><a href ="essays.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'essays')">essays</button></a></li>
   <li><a href ="quotes.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'quotes')">quotes</button></a></li>
-  <li><button class="tablinks" onclick="window.location.href='https://www.uncutchapelhill.com'">UNCUT</button>
+  <li><button class="tablinks" onclick="window.location.href='https://www.uncutchapelhill.com'">UNCUT</button></li>
   <!--<a href ="wage.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'Wage')">Wage</button></a>-->  <li><a href ="contact.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'contact')">contact</button></a></li>
             </ul>
            </div>
           </nav>
     </div>
 
-<div id="essays" href ="essays.html" class="tabcontent">
-  <h3>essays</h3>
 
-  <p> It is currently on my to-do list to work on these pieces before publicizing. For now, most links are hidden; an addendum to a book I enjoy, and a poem remain. I apologize.
-
-  <ul>
-  <!-- <a href="nonsense.html"><li>Getting Used to Nonsense</li></a>
-  <a href="rules.html"><li>Rules</li></a>
-  <a href="latinisdead.html"><li>Latin is Dead</li></a>
-  <a href="studentathletes.html"><li>Student Athletes are Humans, Too</li></a>
-  <a href="violence.html"><li>On Violence</li></a>
-  <a href="staircase.html"><li>Staircase of Importance </li></a>
-  <a href="hard.html"><li>Things Are Always Hard Before You Do Them</li></a>
-  <a href="soccer.html"><li>Like a Soccer Ball </li></a>
-  <a href="internet.html"><li>Not Built for the Internet </li></a> -->
-  <a href="shedevil.html"><li>The Life and Loves of a She-Devil: Chapter 36 </li></a>
-  <a href="ashes.html"><li>ashes to fall in love with</li></a>
-<!--   <a href="rate.html"><li>Rate of Change</li></a> -->
+<div>
 
 
-</ul>
+<iframe style="margin: 500px" src="https://open.spotify.com/embed/playlist/37i9dQZF1EpqfwUplxQBg8" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+
+
+
 </div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
 
 </body>
 </html> 

@@ -49,7 +49,7 @@ cite {
   width: 100%;
   margin-left: 10px;
   margin-top: 10px;
-  margin-right: 10px;
+  margin-right: 0px;
 }
 
 #myImg:hover {opacity: 0.7;}
@@ -161,7 +161,7 @@ ul {
 
 .container {
   margin-top: 50px; 
-  Display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -170,7 +170,7 @@ ul {
   border-radius: 40px;
   width: 100%;
   height: 600px;
-  Display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 30px 50px 100px #85888C;
@@ -186,25 +186,30 @@ ul {
 nav {
   background-color: black;
   height: 65px;
+  width: 100vw;
 
 }
 
 
 #menuToggle {
+  border-color: black;
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
-  position: relative;
+  position: absolute;
   top: 25px;
   left: 25px;
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
+  border-color: black;
 }
 
 #menuToggle input
 {
+  border-color: black;
   display: flex;
-  width: 40px;
+  width: 30px;
   height: 32px;
   position: absolute;
   cursor: pointer;
@@ -214,8 +219,9 @@ nav {
 
 #menuToggle span
 {
+  border-color: black;
   display: flex;
-  width: 29px;
+  width: 30px;
   height: 2px;
   margin-bottom: 5px;
   position: relative;
@@ -231,6 +237,7 @@ nav {
 #menuToggle span:first-child
 {
   transform-origin: 0% 0%;
+  border-color: black;
 }
 
 #menuToggle span:nth-last-child(2)
@@ -290,6 +297,9 @@ button {
   color: black;
   background-color: white;
   margin-top: 0px;
+  border-color: white;
+  width: 110px;
+
 }
 
   #myImg {
@@ -360,7 +370,7 @@ button {
   border-left: none;
   height: 300px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: 0;
 
 }
 
@@ -409,13 +419,13 @@ button {
 
 <div id="home" class="tabcontent">
 
-<p style="margin-left:60px">tu quoque, qui aestivos spatiosus exigis ignes,<br>
+<p style="margin-left:15px; margin-right: 0px">tu quoque, qui aestivos spatiosus exigis ignes,<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phoebe, moraturae contrahe lucix iter.<br>
 nox mihi prima venit! primae da tempora nocti!<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;longius in primo, Luna, morare toro.</p>
   
-  <p style="margin-left:60px">"You too, Sun, who draws out his fires far and wide,<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;speed up the journey of your lingering light––  <br>
+  <p style="margin-left:15px;  margin-right: 0px">"You too, Sun, who draws out fires far and wide,<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hurry the journey of your lingering light––  <br>
   my first night is coming! Add time to my first night!<br>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Stay a while, Moon, over our first union!"</p>
 

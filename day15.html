@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!--<base href="https://www.justinhadad.com/" target="_blank"> -->
+
+    <title>Day 15: Joy at Oizys</title>
+    <!-- Keywords used in the website -->
+    <meta name="keywords" content="Justin Hadad, biking, biking blog, blog, dee and the runners, day 4, east coast greenway">
+    
+    <!-- Description for Website -->
+    <meta name="description" content="Oe.">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        
+  </head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<style>
+* {box-sizing: border-box}
+body {
+  font-family: "Open Sans", sans-serif;
+  text-justify: inter-word;
+  font-size: 11pt;
+  text-align: justify;
+}
+button {font-family: 'Charter'; font-size: 20px;}
+
+hr {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  color:  black;
+
+}
+
+ul {
+  list-style-type: square;
+  lighting-color: black;
+  color: black;
+  margin: 20px;
+  padding: 0px;
+}
+
+cite {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.ami div {display:none}
+.ami:hover div {display:block}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+/* A link that has not been visited */
+a:link {
+    color: blue;
+}
+/* A link that has been visited */
+a:visited {
+    color: blue;
+}
+/* A link that is hovered on */
+a:hover {
+    color: red;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Style the header */
+
+.header {
+  padding-left: 100px;
+  text-align: justify;
+  background: white;
+  color: black;
+  font-size: 15px;
+}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1.5px groove #99badd;
+  border-color: #99badd; /*mess*/
+  background-color: #041d4f;
+  width: 10;
+  height: 100%;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: #590404;
+  color: white;
+  padding: 8px 8px;
+  width: 100%;
+  outline: black;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+  border-color: groove black
+  font-weight: 900;
+}
+
+/* Change background color of buttons on hover */
+/* Change background color of buttons on hover */
+/*.tab button:hover {
+  background-color: #ddd;
+} */
+
+/* Create an active/current "tab button" class 
+.tab button.active {
+  background-color: #ccc;
+}
+*/
+
+
+
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 2px ;
+  width: 50%;
+  max-width: 500px; /* this is the width of page */
+  border-left: none;
+  height: 300px;
+}
+
+#content-desktop {display: block;}
+#content-mobile {display: none;}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 600px) {
+  #content-desktop {display: none;}
+  #content-mobile {display: block;}
+  .modal-content {
+    width: 100%;
+  }
+
+  .tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 2px;
+    width: 100%;
+    max-width: 100%;
+    border-left: none;
+    height: 600px;
+  }
+
+body {
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+
+
+.container {
+  margin-top: 50px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phone {
+  background-color: #36383F;
+  border-radius: 40px;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 30px 50px 100px #85888C;
+}
+.content {
+  border: 1px solid #36383F;
+  border-radius: 20px;
+  width: 100%;
+  height: 91%;
+  background-color: white;
+  overflow: hidden;
+}
+nav {
+  background-color: black;
+  height: 65px;
+  width: 100vw;
+
+}
+
+
+#menuToggle {
+  border-color: black;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+  border-color: black;
+}
+
+#menuToggle input
+{
+  border-color: black;
+  display: flex;
+  width: 30px;
+  height: 32px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menuToggle span
+{
+  border-color: black;
+  display: flex;
+  width: 30px;
+  height: 2px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #ffffff;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 5px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+  border-color: black;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-3px, -1px);
+  background: black;
+}
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 180px;
+  height: 430px;
+  box-shadow: 0 0 10px #99badd;
+  margin: -50px 0 0 -50px;
+  padding: 50px;
+  padding-top: 80px;
+  background-color: white;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+}
+
+#menu li
+{
+  padding: 8px 0;
+  transition-delay: 2s;
+
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+button {
+  font-family: "Open Sans", sans-serif;
+  text-justify: inter-word;
+  font-size: 13pt;
+  color: black;
+  background-color: white;
+  margin-top: 0px;
+  border-color: white;
+  width: 110px;
+
+}
+
+  #myImg {
+    min-width: 300px;
+    height: auto;
+    left: 0px;
+  }
+
+
+} /* MOBILE ENDS HERE
+
+p { margin-left: 5px }
+blockquote { margin-left: 50px }
+
+
+
+</style>
+</style>
+</head>
+<body>
+
+<div id = "content-desktop" class="header">
+  <h1>justin hadad</h1>
+</div>
+
+<div id="content-desktop" class="tab">
+  <a href= "index.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'home')" id="defaultOpen">home</button></a>
+  <a href="about.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'about')">about</button></a>
+  <a href ="experience.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'experience')">experience</button></a>
+  <a href ="writing.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'writing')">writing</button></a>
+  <a href ="quotes.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'quotes')">quotes</button></a>
+  <button class="tablinks" onclick="window.location.href='https://www.uncutchapelhill.com'">UNCUT</button>
+  <!--<a href ="wage.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'Wage')">Wage</button></a>-->  <a href ="contact.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'contact')">contact</button></a>
+
+</div>
+
+
+   <div id = "content-mobile" class="container">
+          
+          <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+            <ul id="menu">
+<li><a href= "index.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'home')" id="defaultOpen">home</button></a></li>
+  <li><a href="about.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'about')">about</button></a></li>
+  <li><a href ="experience.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'experience')">experience</button></a></li>
+  <li><a href ="writing.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'writing')">writing</button></a></li>
+  <li><a href ="quotes.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'quotes')">quotes</button></a></li>
+  <li><button class="tablinks" onclick="window.location.href='https://www.uncutchapelhill.com'">UNCUT</button>
+  <!--<a href ="wage.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'Wage')">Wage</button></a>-->  <li><a href ="contact.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'contact')">contact</button></a></li>
+            </ul>
+           </div>
+          </nav>
+    </div>
+
+<div class="tabcontent">
+  <h3>Day 15: Joy at Oizys</h3>
+  <h4 style = "color: #590404">June 19, 2021</h4>
+
+<p>There’s a place in downtown D.C. called <a href=https://www.kramers.com/>Kramers</a>. Kramers is a bookstore-meets-bar, convening college kids, bookworms, and their intersections alike. It’s a tremendous blend of excitement and joy––while I came for the craft, I left with <em>The Alchemist</em> and an urge for Crab Benedict.</p>
+
+<p>Going into my junior year of college, I interned for <a href=https://www.carbon3d.com/>Carbon</a>, a Silicon Valley-based digital manufacturing company. There, I became friends with a veteran software engineer, Allan, with whom I was able to catch up the other week. We discussed his new company, my career aspirations (anyone hiring?), his new kid. <em>His new kid!</em> It seems that births are mentioned in such passing, though they flip the lives around them upside down. I asked him how it was, you know, having a dependent life form and all. And he responded something I’ll never forget: “Life may be less fun, but it sure has a lot more joy.”</p>
+
+<p>Sure, watching your kid walk doesn’t quite feel like <a href=https://www.youtube.com/watch?v=KJgJx05hR4M>Project X</a>. But watching your kid walk probably serves a trampoline to your heart, bringing pride and meaning that I, kid-less, can’t describe.</p>
+
+<p>There's a meaningful distinction between the energy, thrill, and excitement of our life happenings, and the state of full-ness and elation that comes with relationships and experiences. Since college, I've been imagining a life where I stumble on the former with far less frequency, and where I explicitly pursue a more latent, ever-there happiness. If anything, this trip has been a meaningful segue between one stage of life––college and all its thrills––and this next one, hopefully full of deep, internal joy.<p>
+
+<p>I was able to get a taste of this joy in Richmond; meanwhile, so far in D.C., excitement and thrills feel much more prominent.</p>
+
+<p>I didn’t think I would feel such strong love for Richmond. <em>Richmond</em>. Richmond, Virginia. My heart was full the whole time, the city scaling to second on my personal list of favorite cities to visit (Savannah, Georgia is first; that’s another story). Nothing in Richmond seemed to overrun it––one-off restaurants, home-grown breweries, and niche coffee shops line every corner. It may not have had the big city or college thrill, but for the seven days I was there, Richmond was total joy.</p>
+
+<p>D.C. has been the total opposite. It’s only been 24 hours, sure, but this place is <em>exciting</em>. 1831 had a disco ball echoing first-year dorms, <a href=https://www.google.com/search?q=bullpen&rlz=1C5CHFA_enUS725US725&oq=bullpen&aqs=chrome..69i57j0j0i433j0l7.998j0j1&sourceid=chrome&ie=UTF-8>The Bullpen</a> had a waitress who told me to say “when” for the tequila in my Arnold Palmer, and there’s an attention-worthy building or monument at every corner. The chaos of movement, the ever-pressing need to <em>do</em>, is here. </p>
+
+<p>As the Germans say, it’s an episode of <em>gestalt</em>: the nature of one feeling makes the nature of the other more special. I appreciate the thrill of D.C. because I have decompressed in Richmond; I appreciate the decompression in Richmond because D.C. is much more active.<p>
+
+<p>Even so, I’ve found that I seek wholesome interactions after thrilling times, and vic versa. Some examples: While in Raleigh, I managed to end up at an album release party for a local boy band; the next morning, I visited three book-stores on a solo adventure. Last night, I chased a <em>La Fin du Monde</em> with two losses in chess to a man named Bryan. (Who plays the <a href=https://www.youtube.com/watch?v=2jAaBs9QiQk>Englund</a> these days?!)</p>
+
+<p>Some of my favorite spots along the trail have been able to facilitate both. Richmond’s <a href=https://www.bingorva.com/>Bingo</a> pairs skee-ball with the $75 Preposterous Punch, where six people are legally required to co-sign ordering it. D.C. has the aforementioned, lovely Kramers.</p>
+
+<p>Even in D.C., where thrill seeps into the oxygen, I can tell that opportunities for joy wait in the winds. I felt it this morning: I stood outside the Capitol for 15 minutes, mainly staring at the <a href= https://www.aoc.gov/explore-capitol-campus/art/peace-monument>Peace Monument</a> out front. The white marble statue uses a classical scene to commemorate naval deaths in the Civil War: Grief (the Roman counterpart of Oizys) looks on as History (Clio) holds a tablet that reads “They died, that their country might live.” Below, Victory (Nike) holds a laurel wreath, while Neptune and Mars, governing the sea and war respectively, sit below. A beautiful, bike-stopping sculpture.</p>
+
+<p>And sometimes the funniest, most memorable moments fall in neither category. Consider this video of me falling off my bike, for instance. It is neither exciting nor joyful, though it may bring you the latter.</p>
+
+ <video width="100%" muted controls>
+  <source src="IMG_7730.mov" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+
+
+<hr>
+
+</div>
+
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+
+</body>
+</html> 
+

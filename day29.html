@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!--<base href="https://www.justinhadad.com/" target="_blank"> -->
+
+    <title>Day 29: Origin Stories</title>
+    <!-- Keywords used in the website -->
+    <meta name="keywords" content="Justin Hadad, biking, biking blog, blog, origin stories, day 29, east coast greenway">
+    
+    <!-- Description for Website -->
+    <meta name="description" content="Oe.">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        
+  </head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<style>
+* {box-sizing: border-box}
+body {
+  font-family: "Open Sans", sans-serif;
+  text-justify: inter-word;
+  font-size: 11pt;
+  text-align: justify;
+}
+button {font-family: 'Charter'; font-size: 20px;}
+
+hr {
+ margin-bottom: 30px;
+  margin-top: 30px;
+  color:  black;
+}
+
+ul {
+  list-style-type: square;
+  lighting-color: black;
+  color: black;
+  margin: 20px;
+  padding: 0px;
+}
+
+cite {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.ami div {display:none}
+.ami:hover div {display:block}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+/* A link that has not been visited */
+a:link {
+    color: blue;
+}
+/* A link that has been visited */
+a:visited {
+    color: blue;
+}
+/* A link that is hovered on */
+a:hover {
+    color: red;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Style the header */
+
+.header {
+  padding-left: 100px;
+  text-align: justify;
+  background: white;
+  color: black;
+  font-size: 15px;
+}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1.5px groove #99badd;
+  border-color: #99badd; /*mess*/
+  background-color: #041d4f;
+  width: 10;
+  height: 100%;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: #590404;
+  color: white;
+  padding: 8px 8px;
+  width: 100%;
+  outline: black;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+  border-color: groove black
+  font-weight: 900;
+}
+
+/* Change background color of buttons on hover */
+/* Change background color of buttons on hover */
+/*.tab button:hover {
+  background-color: #ddd;
+} */
+
+/* Create an active/current "tab button" class 
+.tab button.active {
+  background-color: #ccc;
+}
+*/
+
+
+
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 2px ;
+  width: 50%;
+  max-width: 500px; /* this is the width of page */
+  border-left: none;
+  height: 300px;
+}
+
+#content-desktop {display: block;}
+#content-mobile {display: none;}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 600px) {
+  #content-desktop {display: none;}
+  #content-mobile {display: block;}
+  .modal-content {
+    width: 100%;
+  }
+
+  .tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 2px;
+    width: 100%;
+    max-width: 100%;
+    border-left: none;
+    height: 600px;
+  }
+
+body {
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+
+
+.container {
+  margin-top: 50px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phone {
+  background-color: #36383F;
+  border-radius: 40px;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 30px 50px 100px #85888C;
+}
+.content {
+  border: 1px solid #36383F;
+  border-radius: 20px;
+  width: 100%;
+  height: 91%;
+  background-color: white;
+  overflow: hidden;
+}
+nav {
+  background-color: black;
+  height: 65px;
+  width: 100vw;
+
+}
+
+
+#menuToggle {
+  border-color: black;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+  border-color: black;
+}
+
+#menuToggle input
+{
+  border-color: black;
+  display: flex;
+  width: 30px;
+  height: 32px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menuToggle span
+{
+  border-color: black;
+  display: flex;
+  width: 30px;
+  height: 2px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #ffffff;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 5px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+  border-color: black;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-3px, -1px);
+  background: black;
+}
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 180px;
+  height: 430px;
+  box-shadow: 0 0 10px #99badd;
+  margin: -50px 0 0 -50px;
+  padding: 50px;
+  padding-top: 80px;
+  background-color: white;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+}
+
+#menu li
+{
+  padding: 8px 0;
+  transition-delay: 2s;
+
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+button {
+  font-family: "Open Sans", sans-serif;
+  text-justify: inter-word;
+  font-size: 13pt;
+  color: black;
+  background-color: white;
+  margin-top: 0px;
+  border-color: white;
+  width: 110px;
+
+}
+
+  #myImg {
+    min-width: 300px;
+    height: auto;
+    left: 0px;
+  }
+
+
+} /* MOBILE ENDS HERE
+
+p { margin-left: 5px }
+blockquote { margin-left: 50px }
+
+
+
+</style>
+</style>
+</head>
+<body>
+
+<div id = "content-desktop" class="header">
+  <h1>justin hadad</h1>
+</div>
+
+<div id="content-desktop" class="tab">
+  <a href= "index.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'home')" id="defaultOpen">home</button></a>
+  <a href="about.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'about')">about</button></a>
+  <a href ="experience.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'experience')">experience</button></a>
+  <a href ="writing.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'writing')">writing</button></a>
+  <a href ="quotes.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'quotes')">quotes</button></a>
+  <button class="tablinks" onclick="window.location.href='https://www.uncutchapelhill.com'">UNCUT</button>
+  <!--<a href ="wage.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'Wage')">Wage</button></a>-->  <a href ="contact.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'contact')">contact</button></a>
+
+</div>
+
+
+   <div id = "content-mobile" class="container">
+          
+          <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+            <ul id="menu">
+<li><a href= "index.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'home')" id="defaultOpen">home</button></a></li>
+  <li><a href="about.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'about')">about</button></a></li>
+  <li><a href ="experience.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'experience')">experience</button></a></li>
+  <li><a href ="writing.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'writing')">writing</button></a></li>
+  <li><a href ="quotes.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'quotes')">quotes</button></a></li>
+  <li><button class="tablinks" onclick="window.location.href='https://www.uncutchapelhill.com'">UNCUT</button>
+  <!--<a href ="wage.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'Wage')">Wage</button></a>-->  <li><a href ="contact.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'contact')">contact</button></a></li>
+            </ul>
+           </div>
+          </nav>
+    </div>
+
+<div class="tabcontent">
+  <h3>Day 29: Origin Stories</h3>
+  <h4 style = "color: #590404">July 3, 2021</h4>
+
+<p>A lot has happened over the last seven days. And when a lot happens, I find it harder to write. 
+
+<p>Since my last post, I’ve moved northward to Philadelphia, Trenton, and Princeton. Each was pleasant, though Trenton seemed incredibly underfunded and underdeveloped. The only pretty building was the Capitol, which felt frightfully Orwellian. I digress.</p>
+
+<p>Let’s play catch up, in no order of excitement. (Or shall I say, <a href=day15.html>joy</a>?)</p>
+
+<p>I got a job! For the coming months, I’ll be a Product Manager at <a href=https://unity.com/>Unity</a>, a real-time development platform, where I’ll outfit their game engine for industries where the software can be socially impactful. Consider this my “announcement.” I have so far strayed from one of those <a href=https://i.redd.it/5v8l4mvww1q51.jpg>horrid</a> <a href=https://static.boredpanda.com/blog/wp-content/uploads/2020/09/10-5f587fed198fa__700.jpg>LinkedIn</a> <a href=https://www.linkedin.com/feed/update/urn:li:activity:6816441861310431232/>posts</a>, and hope to keep it that way. (This is <em>my</em> blog, so I have relative freedom to admit whatever I wish: I’m especially terrible at LinkedIn, and am pretty jealous of the people that do it well. Maybe I'll cave and post something.)</p>
+
+<p>Aside from Unity, I’ve been falling off my bike like mad. I’m still wearing the Chacos (obviously), so my feet are brutalized, and the nail on my pinky toe managed to fall off. Instead of a video of me falling again, here’s a video of another kid stumbling off my bike:</p>
+
+<video width="100%" muted controls>
+  <source src="IMG_8458.mov" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+
+
+<p>Hope you’re satisfied.</p>
+
+<p>Another story: a few days ago, I was biking around the Liberty Bell, when I got a text from my friend Abby.</p>
+
+<img src="abby.jpg" width="100%" alt="Texts from Abby">
+
+
+<p>She and her family were connecting in Philadelphia on their way to Ann Arbor. Fortunately, their flight to Michigan got cancelled, so they had a day to check out Philly. While touring, they saw me.</p>
+
+<p>After hugs and brief introductions, Dr. and Dr. Carey-Ewend invited me to dinner at <a href=https://talulasgarden.com/>Talula’s Garden</a>. There, I ate one of the best meals I’ve ever had: a tagliatelle and mushroom appetizer, seared sea scallops on lemon risotto, Abby’s leftover pork belly and peaches, and three (!) cocktails, one of which was a spicy passionfruit Mezcal. We discussed our lives, pole dancing, and auction theory. The three-plus-hour dinner was immensely pleasant.</p>
+
+<p>We did that thing where we say "bye" and then walk in the same direction. After that absurdity, I checked my phone, and saw that some of the guys with whom I was staying (Penn med students) were going out to a local brewery. I joined them, mainly to see what “going out with Penn medical students” was like. I’m glad I’m not in med school. (Jokes; it was fun.)</p>
+
+<p>The next morning, I woke up with a slight headache, as you probably expected. I biked to <a href=https://www.lacolombe.com/>La Colombe</a> for a morning juice and iced latte, and sat myself between two old men. While I read, the guy on my right went up to the guy on my left: “Hey, this is for you.” The man turned around his sketch pad, introduced himself as Art––fitting––and tore off the page for the man to keep. It was a beautiful sketch, colored and all, of the man!</p>
+
+<p>I audibly lauded the accuracy. I asked Art about his background, and he shared that he was formerly the art director for Philadelphia Magazine. And then he offered to sketch me. </p>
+
+<img src="IMG_8904.jpeg" width="100%" alt="Texts from Abby">
+
+<p>Cool, right?</p>
+
+<p>Soon after, I went to Philadelphia’s <a href=https://www.ridezoomo.com/>Zoomo</a> location. Zoomo is the company I worked for this past summer, where, among other things, I designed a “security program” that requires employees to chase down stolen bikes. The method, ingenius and all, is now live at all their locations, across three continents.</p>
+
+<p>For those curious, Zoomo is the origin of this trip as a whole: I fell in love with biking there, and I knew, no matter what, that I wanted to bike around the country after college. So, I planned a 730-mile trip along the <a href=https://www.greenway.org/>East Coast Greenway</a>, from North Carolina to New York.</p>
+
+<p>Well, things didn’t go exactly as planned. Turns out Dennis, the director of the trail, was not only a UNC alumnus, but a former Morehead-Cain Scholar. After a few emails, a handful of 1-on-1 basketball games, and some <a href=https://carrburritos.com/>Carrburritos</a>, Dennis offered me a role to take bike- and trail-themed photos in the metro areas along the Atlantic. He said that biking straight there was too risky, so he encouraged me to Amtrak. The cost of Amtrak tickets for the journey was in the four-digits; meanwhile, if I brought my car, I could carry more and spend less. Hence, this trip was born.</p>
+
+<p>Anyway, when I worked at Zoomo, they had only one shop in the U.S. Now, there are a handful of locations, including one in Philadelphia. So I stopped by, and asked a few stupid questions before admitting that I used to work at the company, and that my best friend was the shop's founder, Megan.</p>
+
+<p>When they caught my name, they remembered that Megan had said I was the original “Bike Chaser.” Coincidentally, a bike had been stolen that day, and I was now in charge of snagging it back. Hours later, after scavenging north Philly and sitting in the back of a cop car, I traced down the bike. Ta-da––Philadelphia’s first bike recovery.</p>
+
+<hr>
+
+<p>These stories––the job at Unity, dinner with Abby’s family, Art’s art, and being a Bike Chaser–-pale in comparison to the journey that dominated my week: meeting my family.</p>
+
+<p>While en route to Philadelphia, I passed a sign for Lancaster, PA. I vaguely remembered that my dad spent time there growing up, so I called him, and asked if he still had any ties to the Amish town. It’s worth mentioning that my parents have always shown restraint when talking about my extended family. After all, to my and my siblings’ knowledge, we had just about no extended family in the U.S. </p>
+
+<p>Wrong.
+
+<p>It turned out that my grandmother––in Arabic, <em>sitto</em>––lived there. And so did my dad’s brother. I had the most pleasant chat with them, and was able to flip through photos of my dad when he was younger. Take a look at this:</p>
+
+<img src="IMG_8738.jpeg" width="100%" alt="Texts from Abby">
+
+<p>Since then, I've embarked to learn all that I can about my family, which I've chosen to keep off the inter-webs. Until next time...</p>
+
+
+
+
+<hr>
+
+</div>
+</body>
+</html> 
+

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!--<base href="https://www.justinhadad.com/" target="_blank"> -->
+
+    <title>Day 39: I'm Wide Awake, It's New York</title>
+    <!-- Keywords used in the website -->
+    <meta name="keywords" content="Justin Hadad, biking, biking blog, blog, oI'm Wide Awake, It's New York, day 39, east coast greenway">
+    
+    <!-- Description for Website -->
+    <meta name="description" content="Oe.">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        
+  </head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<style>
+* {box-sizing: border-box}
+body {
+  font-family: "Open Sans", sans-serif;
+  text-justify: inter-word;
+  font-size: 11pt;
+  text-align: justify;
+}
+button {font-family: 'Charter'; font-size: 20px;}
+
+hr {
+ margin-bottom: 30px;
+  margin-top: 30px;
+  color:  black;
+}
+
+ul {
+  list-style-type: square;
+  lighting-color: black;
+  color: black;
+  margin: 20px;
+  padding: 0px;
+}
+
+cite {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.ami div {display:none}
+.ami:hover div {display:block}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+/* A link that has not been visited */
+a:link {
+    color: blue;
+}
+/* A link that has been visited */
+a:visited {
+    color: blue;
+}
+/* A link that is hovered on */
+a:hover {
+    color: red;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Style the header */
+
+.header {
+  padding-left: 100px;
+  text-align: justify;
+  background: white;
+  color: black;
+  font-size: 15px;
+}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1.5px groove #99badd;
+  border-color: #99badd; /*mess*/
+  background-color: #041d4f;
+  width: 10;
+  height: 100%;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: #590404;
+  color: white;
+  padding: 8px 8px;
+  width: 100%;
+  outline: black;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+  border-color: groove black
+  font-weight: 900;
+}
+
+/* Change background color of buttons on hover */
+/* Change background color of buttons on hover */
+/*.tab button:hover {
+  background-color: #ddd;
+} */
+
+/* Create an active/current "tab button" class 
+.tab button.active {
+  background-color: #ccc;
+}
+*/
+
+
+
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 2px ;
+  width: 50%;
+  max-width: 500px; /* this is the width of page */
+  border-left: none;
+  height: 300px;
+}
+
+#content-desktop {display: block;}
+#content-mobile {display: none;}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 600px) {
+  #content-desktop {display: none;}
+  #content-mobile {display: block;}
+  .modal-content {
+    width: 100%;
+  }
+
+  .tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 2px;
+    width: 100%;
+    max-width: 100%;
+    border-left: none;
+    height: 600px;
+  }
+
+body {
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+
+
+.container {
+  margin-top: 50px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phone {
+  background-color: #36383F;
+  border-radius: 40px;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 30px 50px 100px #85888C;
+}
+.content {
+  border: 1px solid #36383F;
+  border-radius: 20px;
+  width: 100%;
+  height: 91%;
+  background-color: white;
+  overflow: hidden;
+}
+nav {
+  background-color: black;
+  height: 65px;
+  width: 100vw;
+
+}
+
+
+#menuToggle {
+  border-color: black;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+  border-color: black;
+}
+
+#menuToggle input
+{
+  border-color: black;
+  display: flex;
+  width: 30px;
+  height: 32px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menuToggle span
+{
+  border-color: black;
+  display: flex;
+  width: 30px;
+  height: 2px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #ffffff;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 5px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+  border-color: black;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-3px, -1px);
+  background: black;
+}
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 180px;
+  height: 430px;
+  box-shadow: 0 0 10px #99badd;
+  margin: -50px 0 0 -50px;
+  padding: 50px;
+  padding-top: 80px;
+  background-color: white;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+}
+
+#menu li
+{
+  padding: 8px 0;
+  transition-delay: 2s;
+
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+button {
+  font-family: "Open Sans", sans-serif;
+  text-justify: inter-word;
+  font-size: 13pt;
+  color: black;
+  background-color: white;
+  margin-top: 0px;
+  border-color: white;
+  width: 110px;
+
+}
+
+  #myImg {
+    min-width: 300px;
+    height: auto;
+    left: 0px;
+  }
+
+
+} /* MOBILE ENDS HERE
+
+p { margin-left: 5px }
+blockquote { margin-left: 50px }
+
+
+
+</style>
+</style>
+</head>
+<body>
+
+<div id = "content-desktop" class="header">
+  <h1>justin hadad</h1>
+</div>
+
+<div id="content-desktop" class="tab">
+  <a href= "index.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'home')" id="defaultOpen">home</button></a>
+  <a href="about.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'about')">about</button></a>
+  <a href ="experience.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'experience')">experience</button></a>
+  <a href ="writing.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'writing')">writing</button></a>
+  <a href ="quotes.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'quotes')">quotes</button></a>
+  <button class="tablinks" onclick="window.location.href='https://www.uncutchapelhill.com'">UNCUT</button>
+  <!--<a href ="wage.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'Wage')">Wage</button></a>-->  <a href ="contact.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'contact')">contact</button></a>
+
+</div>
+
+
+   <div id = "content-mobile" class="container">
+          
+          <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+            <ul id="menu">
+<li><a href= "index.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'home')" id="defaultOpen">home</button></a></li>
+  <li><a href="about.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'about')">about</button></a></li>
+  <li><a href ="experience.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'experience')">experience</button></a></li>
+  <li><a href ="writing.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'writing')">writing</button></a></li>
+  <li><a href ="quotes.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'quotes')">quotes</button></a></li>
+  <li><button class="tablinks" onclick="window.location.href='https://www.uncutchapelhill.com'">UNCUT</button>
+  <!--<a href ="wage.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'Wage')">Wage</button></a>-->  <li><a href ="contact.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'contact')">contact</button></a></li>
+            </ul>
+           </div>
+          </nav>
+    </div>
+
+<div class="tabcontent">
+  <h3>Day 39: I'm Wide Awake, It's New York</h3>
+  <h4 style = "color: #590404">July 13, 2021</h4>
+<p>I have decided not to edit this blog while I write it, outside of the normal spelling, grammatical, or syntactical nonsensicalities. Producing a new blog has taken some time––ten days, to be exact––though it's not because I've failed to do blog-worthy things. The problem is that I just haven't had the urge to write like I used to.</p> 
+
+<p>But, amid my neglect, I remembered that the audience of this blog are my friends and family! You probably don’t care how good these entries are; you likely just want to read what I’m thinking. I’ll leave the good, cohesive writing for the <a href= https://images-na.ssl-images-amazon.com/images/I/71rAsko6ldL.jpg>big dogs</a>, and I'll instead just pour some unadulterated thoughts on this page. I hope this vulnerability is well embraced.</p>
+
+<p>So, trust and consider this my natural self, in free form and streams of consciousness.</p>
+
+<p>To reiterate, writing has not been quite as easy lately. Early on, it was a means of processing: for instance, when I decided that I wanted to "<a href="day1.html">tune it out</a>," or when I reflected on the various manifestations of <a href="day15.html">positive emotions</a>. Now, it’s different: I’ve spent the last week and a half with my friend Jonathan in New Jersey, Josie in Boston, and many, many friends in New York. I biked 40+ miles into the Big Apple from eastern New Jersey, bypassing public nudity and the remnants of a flood, and even riding on a highway by accident. I talked to my family––nuclear and abroad––a lot, and happened upon a copy of <a href=https://bookshop.org/books/murder-on-the-orient-express-9780007234400/9780062073495><em>Murder on the Orient Express</em></a> that I finished in 36 hours (I shamefully had not read it!). I have been eating many good foods, meeting many cool people, and falling off my bike. Among the excitement, setting aside time to write has not felt productive, merely a chore. </p>
+
+<p>Let me put this neglect for writing another way: Jonathan gave me a stack of books––five of them in total, I believe––that he wants me to read. (When he found out I haven't read <a href=https://bookshop.org/books/the-goldfinch/9780316055420><em>The Goldfinch</em></a>, he was especially bothered!) On top of that, my friend Robbie sent me a copy of his own manuscript, which I haven't yet gotten to. These days, I'm drawn to a quote in <a href=https://bookshop.org/books/the-picture-of-dorian-gray-9781976844898/9781976844898><em>The Picture of Dorian Gray</em></a>: “I am too fond of reading books to care to write them.”</p>
+
+<p>Whenever I start writing, I recall that there are so many things to read and learn, and that I don’t learn so much when I write. That's not to say writing can't be privately useful––it can bring public gain, usually financial or pride-based, or it can help the writer process things––but that I'm not looking for its use cases right now. (And if it needs to be said, regarding the former use case, I am certainly not a talented enough writer for it to be lucrative.)</p>
+
+<p>It seems that people mostly want to process––or pray, or reflect, or consider alternate outcomes––when they’re not doing well. I’m doing well, so I don’t want to wait and process things. I want to live! I’ll process in due time.</p>
+
+<p>Most of my concerns of late have revolved around the question “What should I work toward?” The other day, I read one of Paul Graham’s essays, "<a href=http://paulgraham.com/hwh.html>How to Work Hard</a>." It echoes bits of Richard Flamming’s “<a href=https://www.cs.virginia.edu/~robins/YouAndYourResearch.html>You and Your Research</a>.” which I’ve cited once before; each talks about what separates the “greats” from the “elites,” specifically professionally. My friend Megan and I discussed these separators over <a href=https://www.mimichengs.com/>Mimi’s</a> famous dumplings.</p> 
+
+<p>There are two paths of “hard work” that arrive at professional success: one where we specialize––take, for instance, an established mathematician, who has done just her mathematics for her entire career––and produce often highly technical novelties near the top of our field; and another where we don’t specialize, but vary ourselves and socialize, ultimately having a breadth that enables us to draw connections among subjects. With that in mind, what should <em>I</em> pursue? Should I answer to opportunities requiring depth, or those requiring breadth? Where do I belong? (You may consider that I'm awfully too young to wonder this now, though I'm of the mindset that things are awfully consequential just out of college. I hope that one day I can look back and regret this fretting.)</p>
+
+<p>Aside from these musings, I’m blissfully in New York. The journey ends here; I now bike around the city and eat cheesecake and get lost in the <em>urbia</em>. </p>
+
+<p>For a while, especially early on, I felt like I was spending my days, in a way, half asleep. Like I wasn’t mindful of the absurdities of my environment, or of this trip at large. Take, for instance, that I biked around in Fredericksburg and stumbled upon this basketball set.</p>
+
+  <img id="myImg" src="IMG_8476.jpeg" alt="Bankshot makes alternative, accessible basketball courts so that people of all abilities and sizes can play with each other." style="width:100%;max-width:500px">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<p>This court––a <a href=http://www.bankshot.com/>Bankshot</a> court, to be exact––is <em>elite</em>. It's designed so that anyone, of any ability, shape, or size, can play the game of basketball. Also, the hoops are low and the backboards are funky. It's any basketball player's dream, and is especially socially impactful. No way I processed how cool this was when I first stumbled upon it. </p>
+
+<p>There's something about New York that has me wide awake. Maybe it's the energy, people, or the alertness I need to have when I lock my bike up. Skyscraper lights pour onto the streets with a certain reminder that <em>everyone is still awake</em>; WeWork offices––unashamedly my favorite place to work––<a href=https://www.google.com/maps/search/wework+nyc/@40.7450266,-74.0071749,14z/data=!3m1!4b1>line corners</a> like hydrants; coffee shops literally don’t close. I feel alive, well, and on edge. I have a sudden urge to program more and also to buy new shoes, though my Chacos won’t budge. And it’s the perfect place to end this trip.</p>
+
+<hr> 
+
+<p>(The title of this entry alludes to my favorite album, <a href= https://pitchfork.com/reviews/albums/11683-im-wide-awake-its-morning-digital-ash-in-a-digital-urn/><em>I’m Wide Awake, It’s Morning</em></a>.)<p>
+
+
+
+
+
+
+
+
+
+<hr>
+
+</div>
+
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+</body>
+</html> 
+

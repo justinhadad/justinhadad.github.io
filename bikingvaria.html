@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!--<base href="https://www.justinhadad.com/" target="_blank"> -->
+
+    <title>varia</title>
+    <!-- Keywords used in the website -->
+    <meta name="keywords" content="Justin Hadad, east coast greenway, biking, new york, chapel hill, justin, hadad, justin george hadad, bicycle">
+    
+    <!-- Description for Website -->
+    <meta name="description" content="I worked for the East Coast Greenway and biked disjointedly from Chapel Hill to New York City.">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        
+  </head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {
+  font-family: "Open Sans", sans-serif;
+  text-justify: inter-word;
+  font-size: 11pt;
+}
+button {font-family: 'Charter'; font-size: 20px;}
+
+ul {
+  list-style-type: square;
+  margin: 20px;
+  padding: 0px;
+  line-height: 1.5;
+}
+
+cite {
+  font-style: italic;
+  font-size: 14px;
+}
+
+/* Style the header */
+
+.header {
+  padding-left: 100px;
+  text-align: justify;
+  background: white;
+  color: black;
+  font-size: 15px;
+}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1.5px groove #99badd;
+  border-color: #99badd; /*mess*/
+  background-color: #041d4f;
+  width: 10;
+  height: 100%;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: #590404;
+  color: white;
+  padding: 8px 8px;
+  width: 100%;
+  outline: black;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+  border-color: groove black
+  font-weight: 900;
+}
+
+/* Change background color of buttons on hover */
+/*.tab button:hover {
+  background-color: #ddd;
+} */
+
+/* Create an active/current "tab button" class 
+.tab button.active {
+  background-color: #ccc;
+}
+*/
+
+
+/* A link that has not been visited */
+a:link {
+    color: blue;
+}
+/* A link that has been visited */
+/*a:visited {
+    color: blue;
+}
+*//* A link that is hovered on */
+a:hover {
+    color: red;
+}
+
+
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 2px ;
+  max-width: 500px; /* this is the width of page */
+  border-left: none;
+  height: 300px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+#content-desktop {display: block;}
+#content-mobile {display: none;}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 600px) {
+  #content-desktop {display: none;}
+  #content-mobile {display: block;}
+  .modal-content {
+    width: 100%;
+  }
+
+  .tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 2px;
+    width: 100%;
+    max-width: 100%;
+    border-left: none;
+    height: 600px;
+  }
+
+body {
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+
+
+.container {
+  margin-top: 50px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phone {
+  background-color: #36383F;
+  border-radius: 40px;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 30px 50px 100px #85888C;
+}
+.content {
+  border: 1px solid #36383F;
+  border-radius: 20px;
+  width: 100%;
+  height: 91%;
+  background-color: white;
+  overflow: hidden;
+}
+nav {
+  background-color: black;
+  height: 65px;
+  width: 100vw;
+
+}
+
+
+#menuToggle {
+  border-color: black;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+  border-color: black;
+}
+
+#menuToggle input
+{
+  border-color: black;
+  display: flex;
+  width: 30px;
+  height: 32px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menuToggle span
+{
+  border-color: black;
+  display: flex;
+  width: 30px;
+  height: 2px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #ffffff;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 5px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+  border-color: black;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-3px, -1px);
+  background: black;
+}
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 180px;
+  height: 430px;
+  box-shadow: 0 0 10px #99badd;
+  margin: -50px 0 0 -50px;
+  padding: 50px;
+  padding-top: 80px;
+  background-color: white;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+}
+
+#menu li
+{
+  padding: 8px 0;
+  transition-delay: 2s;
+
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+button {
+  font-family: "Open Sans", sans-serif;
+  text-justify: inter-word;
+  font-size: 13pt;
+  color: black;
+  background-color: white;
+  margin-top: 0px;
+  border-color: white;
+  width: 110px;
+
+}
+
+  #myImg {
+    min-width: 300px;
+    height: auto;
+    left: 0px;
+  }
+
+
+} /* MOBILE ENDS HERE
+
+
+</style>
+</style>
+</head>
+<body>
+
+<div id = "content-desktop" class="header">
+  <h1>justin hadad</h1>
+</div>
+
+<div id="content-desktop" class="tab">
+  <a href= "index.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'home')" id="defaultOpen">home</button></a>
+  <a href="about.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'about')">about</button></a>
+  <a href ="experience.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'experience')">experience</button></a>
+  <a href ="writing.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'writing')">writing</button></a>
+  <a href ="quotes.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'quotes')">quotes</button></a>
+  <button class="tablinks" onclick="window.location.href='https://www.uncutchapelhill.com'">UNCUT</button>
+  <!--<a href ="wage.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'Wage')">Wage</button></a>-->  <a href ="contact.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'contact')">contact</button></a>
+
+</div>
+
+
+   <div id = "content-mobile" class="container">
+          
+          <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+            <ul id="menu">
+<li><a href= "index.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'home')" id="defaultOpen">home</button></a></li>
+  <li><a href="about.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'about')">about</button></a></li>
+  <li><a href ="experience.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'experience')">experience</button></a></li>
+  <li><a href ="writing.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'writing')">writing</button></a></li>
+  <li><a href ="quotes.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'quotes')">quotes</button></a></li>
+  <li><button class="tablinks" onclick="window.location.href='https://www.uncutchapelhill.com'">UNCUT</button>
+  <!--<a href ="wage.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'Wage')">Wage</button></a>-->  <li><a href ="contact.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'contact')">contact</button></a></li>
+            </ul>
+           </div>
+          </nav>
+    </div>
+
+<div class="tabcontent">
+
+  <h3>varia</h3>
+
+<p> See also: <a href=biking.html>blog</a> | <a href=bikingrestaurants.html>restaurants</a> | <a href=bikingcoffee.html>coffee</a> | <a href=bikingbrews.html>brews</a></p> 
+
+<hr>
+
+  <p><em>Varia</em> is a Latin word that means the “catchall,” or more literally, “various things.” I listed my favorite activities and things of the sort below.</p>
+
+<p><strong>5. <a href=https://www.instagram.com/bossanovacivicclub/?hl=en>Bossa Nova</a>, Brooklyn, NY</strong></p>
+
+<p>If it looks like a bar, smells like a bar, and serves drinks like a bar, then it's probably a bar. Unless it’s Bossa Nova. I have no idea what Bossa Nova is, really. It’s basically a bar but with EDM music and smoke pumping through it, so much so that you can’t see your hands. Nonetheless, it was an absurdly fun time, and I recommend you go, if that’s your scene. </p>
+
+
+<p><strong>4. <a href=https://www.trailforks.com/skillpark/belle-isle-skills-area/>Belle Isle Bike Park</a>, Richmond, VA</strong></p>
+
+<p>Belle Isle is literally an island––you have to cross a suspension bridge to get there. So, when I found a bike park there, I was stunned. I would share more, but you’ve already seen me there––remember when I <a href=https://justinhadad.com/day15.html>fell off my bike</a>?</p>
+
+<p><strong>3. <a href=https://en.wikipedia.org/wiki/Rucker_Park>Rucker Park</a>, Harlem, NY</strong></p>
+<p>Arguably the most famous basketball court in the world, Rucker Park features NBA players, Instagram celebrities, and commentators. No, not famous commentators who play in the games––locals who commentate over the games being played at the park. When I was there, Jason Williams (“White Chocolate”) and a few big-time high school players were there. My friend Kimathi took a video of me shooting around, which I'll use as proof of my attendance.</p>
+
+ <video width="100%" muted controls>
+  <source src="rucker.mov" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<p>You caught me––I'm not wearing the Chacos. I thrifted a pair of basketball shoes just to play at Rucker Park. And it was worth it.</p>
+
+<p><strong>2. <a href=https://www.bankshot.com/>Bankshot</a>, Fredericksburg, VA</strong></p>
+
+<p>I mentioned Bankshot in two blog posts already. The eight-plus hoop stations are designed so that all kids can play, all the time. You can find the court at John Lee Pratt Park, though there are other locations scattered across the country. </p>
+
+<p>Ball not included, though the Confederate Flag that overhangs it is. </p>
+
+
+
+
+<p><strong> 1. <a href=https://www.vitalclimbinggym.com/brooklyn>VITAL</a>, Brooklyn, NY</strong></p>
+<p>First floor: rock walls, gym, snack station, locker rooms. Roof: bar, restaurant, more rock walls, New York City skyline. An absolutely unreal place. </p>
+
+<p>The $1,200/year pricetag is hilariously steep, but somehow seems worth it.</p>
+
+
+<hr style="margin-top: 60px; margin-bottom: 30px">
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</body>
+</html> 
+
+
+

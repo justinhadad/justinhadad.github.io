@@ -443,10 +443,37 @@ h4 {
     height: 28px;
 }
 
+.heading {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  /*transition: 0.4s;*/
+  text-align: left;
+  display: block;
+  margin-top: 1.33em;
+  margin-bottom: 1.33em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.jobs { margin-left: 30px}
+
+.jobs p {margin-bottom: 0px; margin-top:  0px; padding-top: 0px; padding-bottom: 0px}
+
+.job details summary {margin-left: 15px} 
+
+
+summary::-webkit-details-marker {
+  display: none
+}
+
+
 
 
 </style>
-</style>
+
 </head>
 <body>
 
@@ -490,96 +517,126 @@ h4 {
 <div id="experience" class="tabcontent">
   <h3>experience</h3>
 
-<button class="accordion">summary</button>
-<div class="panel">
-<p>In May 2021, I graduated from the University of North Carolina at Chapel Hill with highest distinction. I received a B.S. in economics (game theory; <a href=undergraduate-thesis.pdf>auctions</a>), and designed my own, second major, “Applied Physics,” which concerned the numerical methods that can explain and derive natural phenomena. I also earned a minor in Latin, focusing on reader-response theory, African-American reception, and Propertius.</p>
+  <h6 class = "heading">summary</h6>
 
-<p>I earned placement into Phi Beta Kappa, and was an <a href="https://honorscarolina.unc.edu/">Honors Carolina Laureate</a>, <a href="https://ccps.unc.edu/apples/bryan-social-innovation-fellowships-3/">Robert E. Bryan Fellow</a>, <a href="http://www.launchchapelhill.com/">Launch Chapel Hill Fellow</a>, <a href="https://innovate.unc.edu/1789-student-venture-fund/">1789 Venture Fellow</a>, and a few others.</p>
+  <p>In May 2021, I graduated from the University of North Carolina at Chapel Hill with highest distinction. I received a B.S. in economics (game theory; <a href=assets/images/undergraduate-thesis.pdf>auctions</a>), and designed my own, second major, “Applied Physics,” which concerned the numerical methods that explain and derive natural phenomena. I also earned a minor in Latin, focusing on reader-response theory, African-American reception, and Propertius.</p>
 
+  <p>I'm keen on using economic theory and technology to effect social change. My research interests span two-sided matching markets, auctions, reader-response theory, and Propertius.</p>
 
+  <p> While at university, I was particularly enabled to explore many different things because of my enrollment in the <a href = "http://www.moreheadcain.org/">Morehead-Cain program</a>. The first merit scholarship in the U.S., it accepts 3% of applicants, and fully funds a four-year educational experience, including summer enrichment, personal discovery, and outdoor leadership.</p>
 
-  <!--<p> I’m intrigued by most things, a phenomenon which I imagine everyone who specializes either never wanted or simply suppressed. I don’t know if specialization is better, though I imagine that those who do don’t often ask the question “What am I <em>really</em> good at?”</p>-->
+ <h6 class = "heading">professional</h6>
+<div class="jobs">
 
-  <p>I am particularly enabled to explore many different things because of my enrollment in the <a href = "http://www.moreheadcain.org/"> Morehead-Cain program</a>. The first merit scholarship in the U.S., it accepts 3% of applicants, and fully funds a four-year educational experience, including summer enrichment, personal discovery, and outdoor leadership. Because of the program, I have been able to study classics in Manchester, poetry in Rome, and biking in California, among other things.
-</div>
+<details><summary><strong>Product Manager</strong> <span style="float: right;">age 22, 4 months <span>&#8594;</span>
+</span><p>Unity</p></summary><br>
+<p>Learned SQL and deltaDNA, then became the “tutorial guy” for SQL and deltaDNA. Helped pivot Unity Reflect from “pre-process” software (3D review; Revit, Rhino, SketchUp) to “post-process,” where building managers can maintain their spaces digitally. Built a racing video game (C# and Unity) during work hours because part of my job was to “interface with the software.”</p>
+</details>
 
-<button class="accordion">big projects</button>
-<div class="panel">
-  <!--<div class="vr" id="content-desktop">&nbsp;</div>-->
- <a href = "https://www.uncutathletics.com/"> <img src = uncut.png alt ="" style ="max-width: 75px; margin-left: 10px"></a>
-<p> UNCUT is a 501(c)(3) student-athlete storytelling platform that shines a light on the human side of college athletes. </p>
+<br>
 
-<p> We launched UNCUT in September 2019. Since then, we’ve added added 28 team members, amassed 100K+ content views and 6K+ followers across seven platforms, and have had content featured on <a href = "https://www.espn.com/college-football/story/_/id/28987224/how-former-north-carolina-ol-helped-build-app-college-football-playbooks">ESPN</a>, <a href = "https://www.instagram.com/p/B3I4-HhAo5J/">Bleacher Report</a>, the <a href  = "https://www.youtube.com/watch?v=tI47FN2RrG4">Sports Shop Radio</a>, (a second time with Terrell Owens, Tim Brown, and myself, but that was taken down), and more. </p>
+<details><summary><strong>Co-founder</strong> <span style="float: right;">age 21, 6 months</span><p>SplitTime</p></summary><br>
+  <p>Built a scheduling app where employees say where/with whom they want to work, and schedules are assigned according to preferences, capacity limits, and safety. Hired 5 team members, led engineering and design, and did everything from mock up UI/UX to coding. Conducted 27 personalized product demos and 58 interviews with consulting firms, sports teams, and F500 companies. Worked 90-hour weeks; realized that was untenable.</p>
+</details>
 
-<!--<div class="vr" style="height: 40px" id="content-desktop">&nbsp;</div>-->
-<img src = wage.png alt ="" style ="max-width: 75px; max-height: 40px; margin-left: 15px">
+<br>
 
-<p> Wage is a scheduling software merging machine learning and economic theory to solve inefficiences in the workplace. </p>
+<details><summary><strong>Economics Associate</strong> <span style="float: right;">age 20-21, 6 months</span><p>Zoomo</p></summary><br>Went to design security software; realized the security they needed was on-the-ground instead of in microchips. Biked around (safely) during the pandemic. Got a room in a co-living space because it was cheaper; this was, in fact, less safe.
+</details>
 
-<p> I started Wage in June 2018, and presented the company at Uber Headquarters in April 2019. The software incorporates various elements of welfare economics and labor, social choice, and auction theory. The purpose of the app is to let employees schedule themselves, and in turn, making them and the employers happier than they would be otherwise.</p>  
-</div>
-
-<button class="accordion">summers</button>
-<div class="panel">
-<!--<div class="vr" id="content-desktop">&nbsp;</div>-->
-<a href=https://www.ridezoomo.com/><img src = bolt.png alt ="" style ="max-width: 75px; max-height: 40px; margin-left: 10px"></a>
-
-<p>Bolt Bikes (now Zoomo) offers electric bikes that optimize delivery time for food couriers. </p>
-
-<p> I spent a few weeks of the hectic, historic summer of 2020 as a software engineer/economics associate, with a main focus on bike security. I saved $14K in bike hardware, updated software protocol, and biked around SF.</p>  
+<br> 
+<details><summary><strong>Product Manager, Intern</strong> <span style="float: right;">age 19-20, 4 months</span><p>Carbon</p></summary><br>Wrote hierarchical clustering algorithms using the Python-Splunk REST API with a Nest add-on for automated queries. Recruited coworkers to join an inter-company basketball league in Silicon Valley; made a game-winner after my last day of work.
+</details>
+<br>
+<details><summary><strong>Warehouse Worker</strong> <span style="float: right;">age 18, 2 months</span><p>FST Logistics</p></summary><br>Packed and moved boxes. Ate cereal out of a guy’s pocket once.
 
 
-<!--<div class="vr" id="content-desktop" style="height: 20px; margin-top: 5px" >&nbsp;</div>-->
-<a href = "https://carbon3d.com/"> <img src = carbon.png alt ="" style ="max-width: 75px; max-height: 40px; margin-top: 5px; margin-left: 15px"></a>
+</details>
+<br>
+<details><summary><strong>Mechanical Engineer</strong> <span style="float: right;">age 15-18, 3 years</span><p>Prater Engineering</p></summary><br>Drafted CAD files, sometimes Revit files. Designed HVAC units that were probably revised by people above me. Never talked to anybody.
+<!--   <p style="float:  right; color: red"><em>Difficulty: </em>ex ante<em> impossible; </em>ex post<em> probably not so much.<em>
+ --></details>
+<br>
 
-<p> Carbon is a digital manufacturing company using 3D printers to bring ideas to market faster. </p>
-
-<p> I spent the summer of 2019 at Carbon, where I worked on some cool data projects, explored San Francisco, and 3D printed a replica 12<sup>th</sup> century Lewis chessmen set.</p>  
-
-
-<!--div id="content-desktop" class="vr" style = "margin-top: 5px">&nbsp;</div>-->
-<a href = "https://justinhadad.com/louisvillefinalreport.pdf"> <img src = louisville.png alt ="" style ="margin-top: 5px; max-width: 75px; max-height: 40px; margin-left: 10px"></a>
-
-<p> Louisville Forward is the city government of Louisville, KY. </p>
-
-<p> In summer 2018, three other Morehead-Cain Scholars and I designed immigrant financial policy by studying the values of business owners in unity with political theory.</p>  
 
 </div>
 
-<button class="accordion">other projects</button>
-<div class="panel">
-<!--<div id="content-desktop" class="vr">&nbsp;</div><a href = "https://parrcenter.unc.edu/"> --><img src = gameshowtheory.png alt ="" style ="max-width: 140px; max-height: 100px; margin-left: 15px"></a>
+<h6 class = "heading">nonprofit</h6>
+<div class="jobs">
 
-<p> In spring 2020, I taught SPCL 400, which covered personal and mentored research in game theory, mechanism design, auctions, social choice, optimal stopping, large numbers, and more. 
+<details><summary><strong>Co-founder, President</strong> <span style="float: right;">age 22, 7 months <span>&#8594;</span>
+</span><p>The Propertius Project</p></summary><br>Built website in simple HTML, CSS, and JS that houses different versions of Propertius’ <em>Elegies</em>. Trying to incorporate the material into Latin education. Paid lawyers to tell me I <strike>couldn’t</strike> shouldn’t get sued.</details>
 
-<p> The single most fulfilling thing I've ever done. One student wrote anonymously, "I've never had a professor care so much about whether student's learned, and who devoted significant time and sacrifice to ensure that students performed to best of their abilities."</p>  
+<br>
 
+<details><summary><strong>Co-founder</strong> <span style="float: right;">age 19-21, 2 years</span></p><p>UNCUT</summary><br>Started a media company that’s live at 9 universities. Over 300,000 total likes, views, and reads. Told by a few of the 140 athletes we’ve covered that we saved their lives. Panicked when the company I built surpassed me in social media follows.
+</details>
 
+<br> 
+<details><summary><strong>Co-founder</strong> <span style="float: right;"> age 20-21, 1 year</span></p><p>Heels Against Hunger</summary><br>Hosted parties where people listened to music, danced, made food, then donated food. Delivered over 2,000 meals. Spanked by COVID.</details>
+<br>
+<details><summary><strong>Team Captain</strong> <span style="float: right;">age 18, 6 months</span><p>Carolina For The Kids</p></summary><br>Broke record for most number of people recruited to join one team. (Teams danced for 24 hours straight and raised money for kids at UNC Children’s.) Subsequently broke record for least amount of money raised per team members. Learned that quality > quantity.</details>
 
-
-<!--<div id="content-desktop" class="vr">&nbsp;</div><a href = "https://parrcenter.unc.edu/"> --><img src = parr.png alt ="" style ="max-width: 100px; max-height: 40px; margin-left: 15px"></a>
-
-<p> The Parr Center for Ethics is one of the nation's leading research facilities and cohorts for ethics, philosophy, and politics. 
-
-<p style = "margin-bottom: 100px"> I lead a team of five students in developing an educational software that tells users their "ethical code" based on a series of questions and games. If you were wondering, I classify as a non-consequentialist, primarily valuing fairness.</p>  
-
-
-  <!--<p> For a condensed version of my experience, you can find my résumé <a href="/Users/justin/Documents/Resume/Hadad Resume.pdf" > here</a>.</p> -->
-</div>
-
-
-
-
-  <!--  <a href = "bikes.html">bikes </a> and <a href = "carbon.html">3D printing in California</a>, and <a href = "louisville.html">business policy in Kentucky</a> (I had to break theme somewhere).</p> -->
-
-<!--<p> Click on the logos below to learn more about each project, or to find the relevant site.</p>-->
-
-
-<hr>
 
 </div>
+<br>
+
+<h6 class = "heading">research</h6>
+<div class="jobs">
+
+<details><summary><strong>Research Group Lead</strong> <span style="float: right;">age 19-21, 2 years</span><p>UNC Department of Phyics</p></summary><br>Met a physics professor named Dr Daniel Young because someone confused my research in game theory for his research in games. Founded research group under him that studied the ways that games can teach both economic theory and introductory physics principles. Gave 5 different conference talks. Taught own class on the material.</details>
+
+<br>
+
+<details><summary><strong>Research Assistant</strong> <span style="float: right;">age 20-21, 1 year</span><p>UNC Department of Classics</p></summary><br>One-on-ones 3+ times a week with <a href=https://www.dailytarheel.com/article/2021/04/university-bog-teaching-awards-feature>UNC’s best professor</a>, Sharon James. Read and hyper-analyzed everything from Derek Walcott’s <em>Omeros</em> to Homer’s poems (they were not texts; they were spoken). Sort-of TA’ed a first-year seminar on Greek tragedy. Discussed racial inequality in classical literature and academia.</details>
+
+<br> 
+<details><summary><strong>Government Research Fellow</strong> <span style="float: right;">age 18, 3 months</span><p>Louisville Metro Government</p></summary><br>Co-wrote a long report detailing the financial policy that immigrant business owners want. Lived and worked with three other Morehead-Cain Scholars. Learned that cleaning is the recipe for a happy household.</details>
+
+<br>
+
+<details><summary><strong>Research Assistant</strong> <span style="float: right;">age 18, 6 months</span><p>UNC Department of Psychology and Neuroscience</p></summary><br>Wrote a Python script that estimated people’s political tendencies based on the language they used on Reddit. Learned that StackExchange is god.
+</details>
+
+<br>
+
+<details><summary><strong>Research Assistant</strong> <span style="float: right;">age 17, 3 months</span><p>Ohio State Department of Biochemistry</p></summary><br>Poured chemical cocktails into beakers. PI didn’t like me because my mom always dropped me off late.</details>
+
+</div> 
+<br>
+
+<h6 class = "heading">teaching</h6>
+<div class="jobs">
 
 
+<details><summary><strong>Course Instructor</strong> <span style="float: right;">age 20, 6 months</span><p>SPCL 400: Game Show Theory</p></summary><br>Allowed to design/teach own course to fellow college students. Topics included one- and two-sided matching markets, auctions, game theory, Newtonian physics, gauge theory, math riddles, and various philosophical quanderies. Mean 5/5 instructor rating; mean 4.92/5 course rating. (The student adduced her non-5 rating to the "scattered" nature of the class. This was a fair assessment.) </details>
+
+  <br>
+
+<details><summary><strong>Tutor</strong> <span style="float: right;">age 15-22, sporadically</span></p><p>Miscellaneous; usually free-lance</summary><br>Most notable story: Assigned via agency to tutor a high schooler in Algebra 1. Taught him all of his first semester math in 1 session. Went rogue and taught him how to code. Parents were reasonably upset.</p></summary>
+
+</div>
+
+<br>
+<h6 class = "heading">athletic</h6>
+<div class="jobs">
+
+<details><summary><strong>Cyclist</strong> <span style="float: right;">age 21, 2 months</span></p><p>East Coast Greenway</summary><br>Biked 500+ miles up the coast. Took photos and wrote about it.</details>
+
+<br>
+
+<details><summary><strong>Practice Squad Player</strong> <span style="float: right;">age 19-20, 1.5 years</span><p>UNC Women's Basketball Team</p></summary><br>Practiced roughly 6x/week with varsity basketball players. Nicknamed “Little Man” because I was smaller than everyone else. Would have continued if not for pandemic restrictions.
+<br> 
+
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 <script>

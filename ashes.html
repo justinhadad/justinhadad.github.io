@@ -80,15 +80,24 @@ cite {
   background-color: rgba(0, 0, 0, 0.9);
   /* Black w/ opacity */
 }
-
+.footer {
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   background-color: white;
+   color: black;
+   text-align: center;
+   font-size:  12px;
+   padding-bottom:  20px;
+}
 /* A link that has not been visited */
 a:link {
     color: blue;
 }
 /* A link that has been visited */
-/*a:visited {
+a:visited {
     color: blue;
-}*/
+}
 /* A link that is hovered on */
 a:hover {
     color: red;
@@ -451,7 +460,9 @@ blockquote { margin-left: 50px }
 <p>Click <a href="assets/images/cellardoorF2020.pdf#page=12">here</a> for poem.
 <!-- add footnotes -->
 
-<hr>
+<div class="footer">
+  <p><span style="float: left;">&copy (1+1)<sup>11</sup> - (1+1+1)<sup>(1+1+1)</sup> justin hadad | <a href=sitemap.html>sitemap</span></p>
+</div>
 
 </div>
 </body>

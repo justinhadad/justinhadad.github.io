@@ -4,12 +4,13 @@
 
     <!--<base href="https://www.justinhadad.com/" target="_blank"> -->
 
-    <title>writing</title>
+    <title>travel diaries</title>
+    <link rel="shortcut icon" type="image/jpg" href="assets/images/favicon.png"/>
     <!-- Keywords used in the website -->
-    <meta name="keywords" content="Justin Hadad, UNCUT, University of North Carolina at Chapel Hill, Physics, Economics, game theory, Wage, Columbus Ohio, UNC, St Charles Prep">
+    <meta name="keywords" content="Justin Hadad, east coast greenway, biking, new york, chapel hill, justin, hadad, justin george hadad, bicycle">
     
     <!-- Description for Website -->
-    <meta name="description" content="I've publicized a few things that I've written in the past few years.">
+    <meta name="description" content="I worked for the East Coast Greenway and biked disjointedly from Chapel Hill to New York City.">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         
@@ -25,7 +26,7 @@ body {
 button {font-family: 'Charter'; font-size: 20px;}
 
 ul {
-  list-style-type: square;
+  list-style: none;
   margin: 20px;
   padding: 0px;
   line-height: 1.5;
@@ -36,15 +37,6 @@ cite {
   font-size: 14px;
 }
 
-/* Style the header */
-
-.header {
-  padding-left: 100px;
-  text-align: justify;
-  background: white;
-  color: black;
-  font-size: 15px;
-}
 .footer {
    position: fixed;
    bottom: 0;
@@ -54,6 +46,15 @@ cite {
    text-align: center;
    font-size:  12px;
    padding-bottom:  20px;
+}
+/* Style the header */
+
+.header {
+  padding-left: 100px;
+  text-align: justify;
+  background: white;
+  color: black;
+  font-size: 15px;
 }
 
 /* Style the tab */
@@ -93,6 +94,17 @@ cite {
 }
 */
 
+.footer {
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   background-color: white;
+   color: black;
+   text-align: center;
+   font-size:  12px;
+   padding-bottom:  20px;
+}
+
 
 /* A link that has not been visited */
 a:link {
@@ -102,7 +114,6 @@ a:link {
 a:visited {
     color: blue;
 }
-/* A link that is hovered on */
 a:hover {
     color: red;
 }
@@ -117,10 +128,13 @@ a:hover {
   max-width: 500px; /* this is the width of page */
   border-left: none;
   height: 300px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 #content-desktop {display: block;}
 #content-mobile {display: none;}
+
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 600px) {
   #content-desktop {display: none;}
@@ -150,6 +164,11 @@ ul {
   padding: 0;
   list-style-type: none;
 }
+
+hr {
+ margin-bottom: 30px;
+  margin-top: 100px;
+  color:  black;}
 
 
 
@@ -316,13 +335,13 @@ button {
 </div>
 
 <div id="content-desktop" class="tab">
-  <a href= "index.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'home')" id="defaultOpen">home</button></a>
-  <a href="about.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'about')">about</button></a>
-  <a href ="experience.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'experience')">experience</button></a>
-  <a href ="writing.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'writing')">writing</button></a>
-  <a href ="quotes.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'quotes')">quotes</button></a>
+  <a href= "../index.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'home')" id="defaultOpen">home</button></a>
+  <a href="../about.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'about')">about</button></a>
+  <a href ="../experience.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'experience')">experience</button></a>
+  <a href ="../writing.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'writing')">writing</button></a>
+  <a href ="../quotes.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'quotes')">quotes</button></a>
   <button class="tablinks" onclick="window.location.href='https://www.uncutchapelhill.com'">UNCUT</button>
-  <!--<a href ="wage.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'Wage')">Wage</button></a>-->  <a href ="contact.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'contact')">contact</button></a>
+  <!--<a href ="wage.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'Wage')">Wage</button></a>-->  <a href ="../contact.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'contact')">contact</button></a>
 
 </div>
 
@@ -336,71 +355,31 @@ button {
                 <span></span>
                 <span></span>
             <ul id="menu">
-<li><a href= "index.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'home')" id="defaultOpen">home</button></a></li>
-  <li><a href="about.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'about')">about</button></a></li>
-  <li><a href ="experience.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'experience')">experience</button></a></li>
-  <li><a href ="writing.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'writing')">writing</button></a></li>
-  <li><a href ="quotes.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'quotes')">quotes</button></a></li>
+<li><a href= "../index.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'home')" id="defaultOpen">home</button></a></li>
+  <li><a href="../about.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'about')">about</button></a></li>
+  <li><a href ="../experience.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'experience')">experience</button></a></li>
+  <li><a href ="../writing.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'writing')">writing</button></a></li>
+  <li><a href ="../quotes.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'quotes')">quotes</button></a></li>
   <li><button class="tablinks" onclick="window.location.href='https://www.uncutchapelhill.com'">UNCUT</button>
-  <!--<a href ="wage.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'Wage')">Wage</button></a>-->  <li><a href ="contact.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'contact')">contact</button></a></li>
+  <!--<a href ="wage.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'Wage')">Wage</button></a>-->  <li><a href ="../contact.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'contact')">contact</button></a></li>
             </ul>
            </div>
           </nav>
     </div>
 
+
 <div id="writing" href ="writing.html" class="tabcontent">
-  <h3>writing</h3>
-  <p>I place things here that I am more or less comfortable with the world viewing.</p>
-
-<!--   <p>If you would like to be updated whenever I post new writing, you can submit your name and email <a href="subscribe.html">here</a>.</p>
- -->
-<h4>collections</h4>
-  <ul>
-<!--     <a href="migrantthoughts.html"><li>migrant thoughts</li></a>-->    
-        <li><a href=traveldiaries/temphome.html>travel diaries</a> <span style="float: right">[10/2021-2/2022]</span></li>
-       <li><a href=biking.html>biking</a> <span style="float: right">[6-7/2021]</span></li>
-
-  </ul>
-<!-- <h4>academic</h4>
-  <ul>
-      <a href=assets/undergraduate-thesis.pdf><li>thesis</li></a>
-  </ul> -->
-
-<h4>economics</h4>
-<ul>
-<li><a href=assets/value_competition.pdf>The Value of Competition</a> <span style="float: right">[2/2022]</span></li>
-<li><a href=assets/truncation_strategies.pdf>Truncation Strategies</a> <span style="float: right">[1/2022]</span></li>
-<li><a href=assets/comparative_da.pdf>Comparative Welfare in Deferred Acceptance</a> <span style="float: right">[12/2021]</span></li>
-<li><a href=assets/undergraduate-thesis.pdf>Improving Scheduling Outcomes with a Dutch Auction</a> <span style="float: right">[4/2021]</span></li>
-
-
-  </ul>
-
-<h4>loose leaves</h4>
-  <ul>
-  <!-- <a href="nonsense.html"><li>Getting Used to Nonsense</li></a>
-  <a href="rules.html"><li>Rules</li></a>
-  <a href="latinisdead.html"><li>Latin is Dead</li></a>
-  <a href="studentathletes.html"><li>Student Athletes are Humans, Too</li></a>
-  <a href="violence.html"><li>On Violence</li></a>
-  <a href="staircase.html"><li>Staircase of Importance </li></a>
-  <a href="hard.html"><li>Things Are Always Hard Before You Do Them</li></a>
-  <a href="soccer.html"><li>Like a Soccer Ball </li></a>
-  <a href="internet.html"><li>Not Built for the Internet </li></a> -->
-  <li><a href=ashes.html>ashes to fall in love with</a> <span style="float: right">[11/2019]</span></li>
-  <li><a href=shedevil.html>The Life and Loves of a She-Devil: Chapter 36</a> <span style="float: right">[4/2018]</span></li>
-  <li><a href=breakfastended.html>breakfast ended</a> <span style="float: right">[3/2018]</span></li>
-
-<!--   <a href="rate.html"><li>Rate of Change</li></a> -->
-
-
-</ul>
-
-<hr style="margin-top: 60px; margin-bottom: 30px">
+  <h3>travel diaries</h3>
+<p><p><em>coming soon</em></p>
+</p>
 
 <div class="footer">
-  <p><span style="float: left;">&copy 1 &#43; (1 &#43; 1)<sup>11</sup> &#8722; (1 &#43; 1 &#43; 1)<sup>(1 &#43; 1 &#43; 1)</sup> justin hadad | <a href=sitemap.html>sitemap</span></p>
+  <p><span style="float: left;">&copy 1 &#43; (1 &#43; 1)<sup>11</sup> &#8722; (1 &#43; 1 &#43; 1)<sup>(1 &#43; 1 &#43; 1)</sup> justin hadad | <a href=../sitemap.html>sitemap</span></a></p>
 </div>
+
+<hr style="margin-top: 60px; margin-bottom: 60px;">
+
+
 </div>
 
 </body>

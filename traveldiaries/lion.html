@@ -460,7 +460,21 @@ blockquote { margin-left: 50px }
   <h4 style="margin-top:0px"><a href=swimming.html>previous</a> | <a href=spaghetti.html>next</a> </h4>
   <h4 style = "color: #590404">Lucerne, Switzerland</h4>
 
+<p>  Courtesy of <a href = https://www.atlasobscura.com/>Atlas Obscura</a>, Michael, Nina, and I found the Lion of Lucerne, the two-hundred-year-old sandstone monument honoring the Swiss Guards killed in the French Revolution. Like most touristy expeditions, you follow a map until it’s obvious where you’re supposed to be. I looked down and around until I realized I was supposed to look up.</p>
 
+<img id="myImg" src="../assets/images/lion.jpeg" alt="Dedicated to the “loyalty and courage of the Swiss.”" style="width:100%;max-width:500px">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+
+<p>The lion is dying or already dead, a spear broken in his back, the Swiss coat of arms in front of him. I read the Roman numerals––760 died in the insurrection, 350 survived––and then noticed the French shield which the lion lied upon. The open, tilted mouth, the arched eyes, the left paw dangling, his tail beside him. </p>
+
+<p>I felt my heart drop and drop each moment I kept looking onward. Lost for words. The only things I've said about it I've placed here.</p> 
 
 
 <hr style="margin-top: 60px; margin-bottom: 30px">
@@ -470,6 +484,30 @@ blockquote { margin-left: 50px }
 </div>
 
 </div>
+
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
 </body>
 </html> 
 

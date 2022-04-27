@@ -464,11 +464,22 @@ blockquote { margin-left: 50px }
 
 <p>But I was too wrapped up in the man next to me to ask more about the food. He was Portuguese, was traveling into Prague for the first time, and was a full-time cryptocurrency investor. Fun was his priority, and because Prague is a fun city, he made a week-long trip.</p>
 
-<p>In hindsight it feels moments like this one (a talk about Ethereum with a traveling stranger) consumed the trip. I wish I learned more about Prague’s history in my few days there (like the Prague Spring, a photo of which I placed below), but I felt so consumed by people. And a lot of those connections are hard to summarize here. All that’s easy to share is that Lucy and Danny and I will hang out at Oxford. </p>
+<p>In hindsight it feels moments like this one (a talk about Ethereum with a traveling stranger) consumed the trip. I wish I learned more about Prague’s history in my few days there (like the Velvet Revolution, a photo of which I placed below), but I felt so consumed by people. And a lot of those connections are hard to summarize here. All that’s easy to share is that Lucy and Danny and I will hang out at Oxford. </p>
+
+  <img id="myImg" src="../assets/images/revolution.jpeg" alt="The peaceful Velvet Revolution ended one-party rule in Czechoslovakia; three years later, the republic split into two." style="width:100%;max-width:500px">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+
 
 <p>In the spirit of people, extended family is a tricky thing. I’ve kept most of my personal explorations into this topic off the interwebs, nonetheless (you imagine) they are incredibly important to me, nonetheless navigating their de facto importance (irrespective of the amount that I’ve interacted with them) has been nontrivial. To solve their placement in the hierarchy of priorities, I listen closely to how other people view extended family, especially when they don’t live nearby.</p>
 
-<p>It turns out Annabelle has an uncle in Prague. It turns out he––David––is courageous enough to pick up his North Carolina-founded life and move to the Czech Republic. We met over makový koláček and discussed the intentional foams placed on beer mugs, differently sized to different places. We walked and talked and drank at a bookstore, and he told me about Buddhism and intentionality and consequentiality. I felt quite comfortable with him. And I hope that this is how I feel about my family as I meet more of them, and as I travel to places from which my family surely came. </p>
+<p>It turns out Annabelle has an uncle in Prague. It turns out he––David––is courageous enough to pick up his North Carolina-founded life and move to the Czech Republic. We met over <em>makový koláček</em> and discussed the intentional foams placed on beer mugs, differently sized to different places. We walked and talked and drank at a bookstore, and he told me about Buddhism and intentionality and consequentiality. About how life is best a function of exploration––when you go for the thing that you want, and what you'll regret not doing the most. I felt quite comfortable with him. And I hope that this is how I feel about my family as I meet more of them, and as I travel to places from which my family surely came. </p>
 
 
 
@@ -480,6 +491,30 @@ blockquote { margin-left: 50px }
 </div>
 
 </div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+
 </body>
 </html> 
 

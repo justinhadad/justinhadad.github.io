@@ -14,7 +14,21 @@
     <meta name="description" content="I'm a student at UNC Chapel Hill studying physics (applied), economics (game theory), and Latin (reader-response).">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.6/js/imageMapResizer.min.js"></script>
+
+    <style>
+        .image-container {
+            width: 100%;
+            height: auto;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
+    </style> 
 
   </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -385,7 +399,7 @@ button {
 .tabcontent {
   float: left;
   width: 100%;
-  max-width: 500px; /* this is the width of page */
+  max-width: 1000px; /* this is the width of page */
   border-left: none;
   height: 300px;
   margin-left: auto;
@@ -408,69 +422,37 @@ button {
   <h1>justin hadad</h1>
 </div>
 
-<div id="content-desktop" class="tab">
-  <a href= "index.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'home')" id="defaultOpen">home</button></a>
-  <a href="about.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'about')">about</button></a>
-  <a href ="experience.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'experience')">experience</button></a>
-  <a href ="writing.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'writing')">writing</button></a>
-  <a href ="quotes.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'quotes')">quotes</button></a>
-  <button class="tablinks" onclick="window.location.href='https://www.uncutchapelhill.com'">UNCUT</button>
-  <!--<a href ="wage.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'Wage')">Wage</button></a>-->  <a href ="contact.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'contact')">contact</button></a>
 
-</div>
-
-
-   <div id = "content-mobile" class="container">
-          
-          <nav role="navigation">
-            <div id="menuToggle">
-              <input type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
-            <ul id="menu">
-<li><a href= "index.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'home')" id="defaultOpen">home</button></a></li>
-  <li><a href="about.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'about')">about</button></a></li>
-  <li><a href ="experience.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'experience')">experience</button></a></li>
-  <li><a href ="writing.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'writing')">writing</button></a></li>
-  <li><a href ="quotes.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'quotes')">quotes</button></a></li>
-  <li><button class="tablinks" onclick="window.location.href='https://www.uncutchapelhill.com'">UNCUT</button>
-  <!--<a href ="wage.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'Wage')">Wage</button></a>-->  <li><a href ="contact.html" style="text-decoration:none"><button class="tablinks" onclick="openTab(event, 'contact')">contact</button></a></li>
-            </ul>
-           </div>
-          </nav>
-    </div>
 
 <div id="home" class="tabcontent">
 
-<div class="category1">
-  <p><strong><a href=index.html>/home</a></strong></p>
-  <p><strong><a href=about.html>/about</a></strong></p>
-  <p><strong><a href=experience.html>/experience</a></strong></p>
-    <div class="category2">
-      <p><a href=https://www.getsplittime.com/>/SplitTime</a></p><p><a href=https://www.uncutchapelhill.com/>/UNCUT Chapel Hill</a></p>  
-      <p><a href=https://www.uncutathletics.com/>/UNCUT Athletics</a></p>  
-      <p><a href=https://propertius.org/>/Propertius Project</a></p>  
-    </div>
+    <img src="Sitemap.jpg" usemap="#image-map" alt="Site Map" style="width: 100%; height: auto;">
 
-  <p><strong><a href=writing.html>/writing</a></strong></p>  
-  <div class="category2">
-    <p><a href=biking.html>/biking</a></p>  
-    <div class="category3">
-        <p><a href=day1.html>/Day 1: Turn It Down</a><a href=day4.html> /Day 4: Dee and the Runners</a><a href=day11.html> /Day 11: Sherlock Off-Screen</a><a href=day15.html> /Day 15: Joy at Oizys</a><a href=day22.html> /Day 22: The Best Meditations</a><a href=day29.html> /Day 29: Origin Stories</a><a href=day39.html> /Day 39: I'm Wide Awake, It's New York</a><a href=day43.html> /Day 43: Brightness</a><a href=terminus.html> /Terminus: Call the Help Number</a></p>  
-    </div>
-    <p><a href=assets/undergraduate-thesis.pdf>/thesis</a></p>
-    <p><a href=shedevil.html>/The Life and Loves of a She-Devil: Chapter 36</a></p>  
-    <p><a href=ashes.html>/ashes to fall in love with</a></strong></p>  
-    <p><a href=breakfastended.html>/breakfast ended</a></strong></p>  
+    <!-- <div class="image-container">
+      <img src="Sitemap.jpg" usemap="#image-map" alt="Site Map">
+    </div> -->
 
-  </div>
-  <p><strong><a href=quotes.html>/quotes</a></strong></p>
-  <p><strong><a href=contact.html>/contact</a></strong></p>
+<map name="image-map">
+    <area target="" alt="Propertius" title="Propertius" href="https://propertius.org/" coords="585,51,1022,203" shape="rect">
+    <area target="" alt="UNCUT" title="UNCUT" href="https://www.uncutchapelhill.com/" coords="541,711,166,566" shape="rect">
+    <area target="" alt="OXREP" title="OXREP" href="https://academic.oup.com/oxrep/article/38/3/434/6701685" coords="206,907,1127,1059" shape="rect">
+    <area target="" alt="Thesis" title="Thesis" href="https://justinhadad.com/assets/undergraduate-thesis.pdf" coords="11,1207,545,1380" shape="rect">
+    <area target="" alt="Matching Comparative Statics" title="Matching Comparative Statics" href="https://justinhadad.com/assets/comparative_da.pdf" coords="159,1485,1123,1615" shape="rect">
+    <area target="" alt="Quotes" title="Quotes" href="https://justinhadad.com/quotes.html" coords="1340,1564,1690,1687" shape="rect">
+    <area target="" alt="Lutterman Eats" title="Lutterman Eats" href="https://www.instagram.com/luttermaneats/" coords="1882,1539,2275,1770" shape="rect">
+    <area target="" alt="Cellar Door" title="Cellar Door" href="https://justinhadad.com/assets/images/cellardoorF2020.pdf#page=12" coords="2413,1517,2777,1752" shape="rect">
+    <area target="" alt="Bike Trip" title="Bike Trip" href="https://justinhadad.com/biking.html" coords="2683,1210,3308,1348" shape="rect">
+    <area target="" alt="Impossible" title="Impossible" href="https://www.fastcompany.com/3059089/it-turns-out-its-almost-impossible-to-draw-a-bicycle" coords="2824,1369,3142,1503" shape="rect">
+    <area target="" alt="travel" title="travel" href="https://justinhadad.com/traveldiaries/home.html" coords="2730,845,3319,957" shape="rect">
+    <area target="" alt="louisville" title="louisville" href="https://www.linkedin.com/in/justin-hadad/details/experience/1531370722724/single-media-viewer/?profileId=ACoAACKVcQgBqzlQspsAekOUEuzznLdqKfn_QCM" coords="2546,33,2889,155" shape="rect">
+    <area target="" alt="carbon" title="carbon" href="https://www.carbon3d.com/" coords="2207,29,2499,159" shape="rect">
+    <area target="" alt="zoomo" title="zoomo" href="https://www.ridezoomo.com/" coords="1871,33,2192,148" shape="rect">
+    <area target="" alt="unity" title="unity" href="https://unity.com/" coords="1477,7,1773,166" shape="rect">
+    <area target="" alt="home" title="home" href="https://justinhadad.com/" coords="1497,640,2003,1062" shape="rect">
+</map>
 
 
 </div>
-<hr style="margin-top: 60px; margin-bottom: 30px">
 
 <div class="footer">
   <p><span style="float: left;">&copy 1 &#43; (1 &#43; 1)<sup>11</sup> &#8722; (1 &#43; 1 &#43; 1)<sup>(1 &#43; 1 &#43; 1)</sup> justin hadad | <a href=sitemap.html>sitemap</span></p>
@@ -500,6 +482,11 @@ function openTab(evt, name) {
 document.getElementById('answer').value
 </script>
 
+ <script>
+$(document).ready(function() {
+    $('map').imageMapResize();
+});
+</script>
 
 <script>
 // Get the modal

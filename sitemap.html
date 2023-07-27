@@ -57,7 +57,7 @@
 
 <map name="image-map">
     <area target="" alt="Propertius" title="Propertius" href="https://propertius.org/" coords="585,51,1022,203" shape="rect">
-    <area target="" alt="UNCUT" title="UNCUT" href="https://www.uncutchapelhill.com/" coords="541,711,166,566" shape="rect">
+    <area target="" alt="UNCUT" title="UNCUT" href="https://www.uncutchapelhill.com/" coords="566,711,166,541" shape="rect">
     <area target="" alt="OXREP" title="OXREP" href="https://academic.oup.com/oxrep/article/38/3/434/6701685" coords="206,907,1127,1059" shape="rect">
     <area target="" alt="Thesis" title="Thesis" href="https://justinhadad.com/assets/undergraduate-thesis.pdf" coords="11,1207,545,1380" shape="rect">
     <area target="" alt="Matching Comparative Statics" title="Matching Comparative Statics" href="https://justinhadad.com/assets/comparative_da.pdf" coords="159,1485,1123,1615" shape="rect">
@@ -73,19 +73,6 @@
     <area target="" alt="unity" title="unity" href="https://unity.com/" coords="1477,7,1773,166" shape="rect">
     <area target="" alt="home" title="home" href="https://justinhadad.com/" coords="1497,640,2003,1062" shape="rect">
 </map>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-$(window).resize(function(){
-  var imgWidth = $('img[usemap="#image-map"]').width();
-  var imgHeight = $('img[usemap="#image-map"]').height();
-
-  $('map').css({
-    'width': imgWidth,
-    'height': imgHeight
-  });
-}).trigger('resize');
-</script>
    
 </body>
 </html> 

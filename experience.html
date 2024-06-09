@@ -548,6 +548,13 @@ summary::-webkit-details-marker {
 <h6 class = "heading">research</h6>
 <div class="jobs">
 
+
+  <details><summary><strong>Research Assistant</strong> <span style="float: right;">age 24, 2 months <span>&#8594;</span> </span><p>Department of Economics, Harvard</p></summary><br>
+  <p>Working for <a href = "http://scottkom.com/">Scott Kominers</a>. Got verbal permission to write an introduction to an economics book in the style of a poetry journal.</p> 
+  </details>
+  <br>
+
+
 <details><summary><strong>Research Assistant</strong> <span style="float: right;">age 23-24, 6 months</span><p>Department of Economics, Oxford</p></summary><br>
 <p>Wrote the lecture notes and did some course admin for a semester-long market-design course at University of California, Berkeley. Also wrote some time-consuming <a href= https://www.openicpsr.org/openicpsr/project/191062/version/V1/view;jsessionid=4ACF63D0EC92A675AF16FF220BEE45F8>Matlab-to-TeX code</a> that replicates the results from <a href = https://www.aeaweb.org/articles?id=10.1257/aer.20210096>"Matching Mechanisms for Refugee Resettlement"</a> (2023, AER).</p> 
 </details>
@@ -694,11 +701,7 @@ summary::-webkit-details-marker {
 <div class="jobs">
 
   <details><summary><strong>Men's Basketball Player</strong> <span style="float: right;">age 23-24, 1 year <span>&#8594;</span></span><p>University of Oxford</p></summary><br>
-  <p>Smashed my teeth into my mouth during tryouts and had to go to the ER twice. Played for the Twos (second team) post-injury and eventually became captain, now I play for the Blues (varsity).</p>
-
-  <br>
-  Game-winner at a tournament in Paris available <a href= https://www.instagram.com/reel/C3OG2PfNqXV/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==>here</a>; you can also watch a notable game––the annual match against Cambridge––<a href = https://www.youtube.com/live/AdU06QQRyxY?feature=share&t=6285>here</a>. I'm #43.
-
+  <p>Play for the Blues (varsity) team. Smashed my teeth into my mouth during the season and had to go to the ER twice.</p>
 </details>
 <br> 
 
@@ -746,6 +749,41 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 </script>
+
+ <script>
+        function calculateDuration(startDate) {
+            const start = new Date(startDate);
+            const now = new Date();
+            const totalMonths = (now.getFullYear() - start.getFullYear()) * 12 + now.getMonth() - start.getMonth();
+            const years = Math.floor(totalMonths / 12);
+            const months = totalMonths % 12;
+            return { years, months };
+        }
+
+        function updateDurations() {
+            const detailsElements = document.querySelectorAll('details[data-start-date]');
+            detailsElements.forEach(details => {
+                const startDate = details.getAttribute('data-start-date');
+                const { years, months } = calculateDuration(startDate);
+                const durationText = years > 0 ? `${years} year${years > 1 ? 's' : ''}, ${months} month${months !== 1 ? 's' : ''}` : `${months} month${months !== 1 ? 's' : ''}`;
+                const ageText = details.querySelector('.float-right');
+                ageText.textContent = `age ${calculateAge(startDate)}, ${durationText}`;
+            });
+        }
+
+        function calculateAge(startDate) {
+            const start = new Date(startDate);
+            const now = new Date();
+            let age = now.getFullYear() - start.getFullYear();
+            const monthDiff = now.getMonth() - start.getMonth();
+            if (monthDiff < 0 || (monthDiff === 0 && now.getDate() < start.getDate())) {
+                age--;
+            }
+            return age;
+        }
+
+        document.addEventListener('DOMContentLoaded', updateDurations);
+    </script>
 
 <script>
   acc[0].click(); // <-- Invoke the onClick for the first tab.

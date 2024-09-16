@@ -313,7 +313,16 @@ button {
   }
 
 
-} /* MOBILE ENDS HERE
+} 
+
+details {
+  margin-bottom: 20px; /* Adjusts the space between items */
+}
+
+details p {
+  margin-left: 10px;
+  font-size: 13px; /* Decreases the font size of the expanding content */
+}
 
 
 </style>
@@ -373,15 +382,47 @@ button {
   <!-- <h3>economics</h3> -->
 
 <h4>research</h4>
+
   <ul>
 
-    <p><strong>Hadad, J.</strong> (2024). Matching with costly information acquisition. Working Paper. <a href= "assets/matching_with_costly_information_acquisition.pdf">[most recent version]</a></p>
+    <details><summary><strong>Hadad, J.</strong> (2024). Matching with costly information acquisition. Working Paper. <a href= "assets/matching_with_costly_information_acquisition.pdf">[most recent version]</a></summary><p><strong>abstract [economics]</strong></p>
+<p>We study strategic behavior in two-sided matching markets where preferences are aligned but imperfectly known, and where workers pay acquisition costs to learn their utilities from matching with different firms. When workers finish strategically obtaining match utilities, a centralized institution creates the matching by pairing successive worker-firm pairs with the highest realized surplus. We identify the class of information-acquisition mechanisms that implement the ex-post stable and Pareto-efficient matching, and the mechanism within the class which minimizes expected aggregate acquisition cost. Our main result proves that the number of acquisitions is minimized in expectation if the agents with the highest commonly-known values find their stable matches as early as possible.</p>
 
-    <p><strong>Hadad, J.</strong> (2023). On the analytical bounds for average rank in one-to-one two-sided matching markets. Working Paper. <a href="Hadad (2023).pdf">[most recent version]</a></p>
+<p><strong>abstract [english]</strong></p>
+<p>Imagine you’re a matchmaker for a reality-TV dating show, where monogamous and heterosexual men and women are to be paired up. You have perfect information of how generally desirable each participant is, but you don’t know the players’ idiosyncratic preferences over people of the other sex. You, as the matchmaker, are judged based on the quality of the matches that you create — the higher the quality of the matches, the more couples stick together; and the more couples that stick together, the more points/dollars/pride you win. </p>
+
+<p>The tricky part is that you can’t just assign single people to each other — you need to take the time to learn the quality of potential pairings, by arranging “dates” between a prospective pair. But you also can’t take forever — and in fact, your “score” decreases the longer it takes you to decide on a matching.</p>
+
+<p>How can you maximize your score, as this TV matchmaker?</p>
+
+<p>This paper answers definitively (under the assumptions disguised in the above description, which can all be written in “economics”-y language): If dates are sufficiently cheap, you should arrange dates between the most desired candidate on one side with <strong>all of the people</strong> who could feasibly be their most-preferred partner. Then you arrange dates between the next most-preferred candidate and all people with whom they could feasibly match, and so on. Every time a more-preferred candidate is displaced from their match, they should find a better partner immediately; once that’s done, you can continue down the list, finding partners for people with lower ranks. The broader intuition is this: you should cater to the most generally-liked candidate, because they are most likely to disrupt whatever matching you had planned if they start going on dates too late in the game.</p>
+
+<p>If this seems like a crazy metaphor, it’s because it is. I write about how a centralized platform can optimize hirings for workers interviewing at firms.</p>
+</details>
+
+    <details><summary><strong>Hadad, J.</strong> (2023). On the analytical bounds for average rank in one-to-one two-sided matching markets. Working Paper. <a href="Hadad (2023).pdf">[most recent version]</a></summary>
+      
+<p><strong>abstract [economics]</strong></p>
+<p>I show that the current average rank bounds in the one-to-one two-sided matching literature are loose in the limit, enough so that known comparative static results cannot be recovered. I construct a motivating problem to demonstrate this looseness, modelled after the result that there is some amount of increased competition that agents prefer to choosing their optimal mechanism. These results are tied to the literature via discussion about the size of the (asymptotic) core, as well as on the effects of competition.</p>
+
+<p><strong>abstract [english]</strong></p>
+<p>There’s a famous result in the theory of auctions called the Bulow-Klemperer Theorem. The result is this: in expectation, an auctioneer will make more revenue from adding an additional bidder than from deploying the optimal auction. It’s fascinating — we can do away with this “optimal mechanism” business and improve revenue in expectation by just increasing competition. This paper of mine is about if we can recover this result in matching theory.</p>
+
+<p>Consider a world where men and women are supposed to match with each other, and where the market is really unbalanced — that is, there are many more men than women, or many more women than men. Say men have two options: (A) add an additional woman to the market, and let women propose to men; or (B) men themselves secure proposing rights. </p>
+
+<p>First, by “proposing rights,” I mean that one side of the market gets charged with the task of offering matches to the other side. Whatever side proposes is weakly better off than when they “accept.”</p>
+
+<p>The answer, I supposed, is (A)—who cares about proposing if you can just increase competition, a la Bulow-Klemperer? While simulations confirm this, this result does <strong>not</strong> hold using the most recent machinery from Pittel (2019), which has welfare bounds for very unbalanced, two-sided, one-to-one matching markets. But I should say: you can easily recover this result using a different paper, which I watched Nick Arnosti present at MATCH-UP 2024 [paper <a href = “https://nickarnosti.com/ResearchPapers/Arnosti_ContinuumModel.pdf”>here</a>]; more on that coming soon!</p></details></p>
     
-    <p><strong>Hadad, J.</strong>, & Teytelboym, A. (2022). Improving refugee resettlement: insights from market design. <em>Oxford Review of Economic Policy</em>. <a href=https://academic.oup.com/oxrep/article/38/3/434/6701685>[open access]</a></p>
+     <details><summary><strong>Hadad, J.</strong>, & Teytelboym, A. (2022). Improving refugee resettlement: insights from market design. <em>Oxford Review of Economic Policy</em>. <a href=https://academic.oup.com/oxrep/article/38/3/434/6701685>[open access]</a></summary>
+
+
+<p><strong>abstract</strong></p>
+<p>The current refugee resettlement system is inefficient because there are too few resettlement places and because refugees are resettled to locations where they might not thrive. We outline how ideas from market design can lead to better resettlement practices. In particular, we discuss how market design can incentivize participation of countries in resettlement and improve the matching of refugees at international and local levels; some of these insights have already been put into practice. Finally, we highlight several further applications of market design in refugee resettlement, including cardinal preference submission and matching with transfers.</p>
+
     
   </ul>
+
 
   <h4>notes</h4>
   <ul>

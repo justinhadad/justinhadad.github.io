@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import SEO from "../../components/SEO"; // Adjust the import path based on your structure
+import Evidence from './evidence.js';
 import BikeTrip from "./bike-trip";
 import LooseLeaves from "./loose-leaves";
 import TravelDiaries from "./travel-diaries/index.js";
@@ -89,6 +90,21 @@ function WritingHome() {
         </WritingSection>
 
         <WritingSection title="loose leaves">
+         {/* <WritingItem
+            title="please leave"
+            to="/writing/loose-leaves/leave"
+            date="3/2026"
+          /> */}
+          {/* <WritingItem
+            title="witness"
+            to="/writing/loose-leaves/witness"
+            date="10/2025"
+          />
+        <WritingItem
+            title="easter sunday"
+            to="/writing/loose-leaves/easter"
+            date="4/2025"
+          /> */}
           <WritingItem
             title="changing"
             to="/writing/loose-leaves/changing"
@@ -123,6 +139,7 @@ export default function Writing() {
       <Route path="bike-trip/*" element={<BikeTrip />} />
       <Route path="loose-leaves/*" element={<LooseLeaves />} />
       <Route path="travel-diaries/*" element={<TravelDiaries />} />
+      <Route path="evidence" element={<Evidence />} />
     </Routes>
   );
 }

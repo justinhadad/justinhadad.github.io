@@ -20,10 +20,17 @@ html {
   overflow-y: scroll;
 }
 
-/* src/index.css or global.css */
+/* src/index.css */
+html {
+  font-size: 90%;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* …your other global rules… */
+
 
 /* Global Responsive Typography and Layout */
 @media (max-width: 768px) {
@@ -100,14 +107,15 @@ html {
     margin-bottom: 0.75rem !important; /* Reduced bottom margin */
   }
 
-  /* Adjust companion elements for better mobile layout */
-  .prose .flex.justify-between.items-baseline {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-  }
-
   .prose .flex.justify-between.items-baseline h4 {
     margin-top: 0.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .prose .flex.justify-between.items-baseline:not(.diary-entry) {
+    flex-direction: column !important;
+    align-items: flex-start !important;
   }
 }
 

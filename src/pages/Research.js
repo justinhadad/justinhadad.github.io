@@ -120,7 +120,7 @@ const Research = () => {
       title: "Balancing welfare and distributional goals in school choice",
       authors: "with Irene Lo & Ivan-Aleksandar Mavrov",
       year: "",
-      link: "",
+      link: "https://drive.google.com/file/d/1Y0hfbpzAT6HJyYrfOKW_Ryw2Z5pyxCym/view?usp=sharing",
       venues: [
         "EC 2026",
         "MATCH-UP 2026",
@@ -258,12 +258,15 @@ const Research = () => {
       <div className="max-w-2xl mx-auto px-4">
         <div className="mb-6">
           <p className="mb-2">
-            My research is in <em>market design</em>, broadly construed as the study of how rules and institutions structure economic interaction. I typically study how welfare, fairness, and equity objectives can be achieved in practice. 
-            </p> 
+            I use the tools of "market design" to think deeply about policy.</p>
 
-              <p className="mb-2">
-            Some works in progress (which are not listed below) pertain to dynamic bargaining, dynamic matching, and political economy.  
-            </p> 
+          <p className="mb-2">
+            My research is typically about how welfare, fairness, and equity objectives can be achieved in practice.
+          </p>
+
+          {/* <p className="mb-2">
+            Some works in progress (which are not listed below) pertain to dynamic bargaining, dynamic matching, and political economy.
+          </p> */}
 
         </div>
 

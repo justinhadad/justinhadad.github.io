@@ -1,16 +1,34 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import MatchingAnimation from './components/MatchingAnimation';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import About from './pages/About';
-import Research from './pages/Research';
-import Writing from './pages/writing';
-import Experience from './pages/Experience';
+import React, { useEffect } from "react";
+import { HashRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import MatchingAnimation from "./components/MatchingAnimation";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Research from "./pages/Research";
+import Writing from "./pages/writing";
+import Experience from "./pages/Experience";
+import RouteHandler from "./components/RouteHandler";
+import GoogleAnalytics from "./components/GoogleAnalytics";
+
+
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   return (
-    <Router basename="/">
+    <Router>
+      <ScrollToTop />
+      <RouteHandler /> {/* Add the RouteHandler here */}
+      <GoogleAnalytics /> {/* Add this line */}
       <div className="min-h-screen bg-white flex flex-col">
         <div className="w-full">
           <MatchingAnimation />

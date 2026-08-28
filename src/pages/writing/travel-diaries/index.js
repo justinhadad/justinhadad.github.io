@@ -24,14 +24,18 @@ import Spaghetti from "./spaghetti";
 import LetterToZurich from "./letter-to-zurich";
 
 const DiaryEntry = ({ title, location, to }) => (
-  <li className="flex items-baseline justify-between">
-    <Link
-      to={`/writing/travel-diaries/${to}`}
-      className="text-gray-900 hover:text-gray-600 transition-colors duration-200"
-    >
-      {title}
-    </Link>
-    <span className="text-sm text-gray-500 ml-4">[{location}]</span>
+  <li className="flex items-baseline justify-between w-full gap-4 diary-entry"> {/* Added diary-entry class */}
+    <div className="flex-1 min-w-0">
+      <Link
+        to={`/writing/travel-diaries/${to}`}
+        className="text-gray-900 hover:text-gray-600 transition-colors duration-200 block truncate"
+      >
+        {title}
+      </Link>
+    </div>
+    <div className="text-sm text-gray-500 flex-shrink-0">
+      [{location}]
+    </div>
   </li>
 );
 
@@ -41,7 +45,7 @@ function TravelDiariesList() {
   return (
     <>
       <SEO
-        title="European Travel Diaries"
+        title="travel diaries"
         description="Personal travel chronicles across Europe while awaiting research position in Zurich. A raw, honest account of solo backpacking through London, Madrid, Prague, Munich, Paris, Istanbul, and more, capturing both the beauty and challenges of extended solo travel."
         pathname="/writing/travel-diaries"
         keywords={[

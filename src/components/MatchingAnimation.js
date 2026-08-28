@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
+import _ from 'lodash';
 
 const MatchingAnimation = () => {
   const canvasRef = useRef(null);
@@ -48,27 +49,30 @@ const MatchingAnimation = () => {
       x: leftMargin,
       y: 30 + i * (height - 60) / Math.max(leftNodeCount - 1, 1),
       matched: false,
-      matchedTo: null
+      matchedTo: null,
+      index: i
     }));
     
     const rightNodes = Array.from({length: rightNodeCount}, (_, i) => ({
       x: width - rightMargin,
       y: 30 + i * (height - 60) / Math.max(rightNodeCount - 1, 1),
-      matched: false
+      matched: false,
+      index: i
     }));
 
-    // Generate random matching
-    const availableRightNodes = [...Array(rightNodeCount).keys()];
-    leftNodes.forEach((node, i) => {
-      if (availableRightNodes.length > 0) {
-        const randomIndex = Math.floor(Math.random() * availableRightNodes.length);
-        node.matchedTo = availableRightNodes[randomIndex];
-        availableRightNodes.splice(randomIndex, 1);
-      } else {
-        node.matchedTo = null; // This node will remain unmatched
-      }
-    });
+    // Create random matching
+    const shuffledLeftNodes = _.shuffle(leftNodes);
+    const shuffledRightNodes = _.shuffle(rightNodes);
+    const minNodes = Math.min(leftNodeCount, rightNodeCount);
+    
+    // Create matches for the minimum number of nodes
+    for (let i = 0; i < minNodes; i++) {
+      shuffledLeftNodes[i].matchedTo = shuffledRightNodes[i].index;
+    }
 
+    // Sort back by vertical position for animation
+    const sortedLeftNodes = _.sortBy(shuffledLeftNodes, 'y');
+    
     let currentPair = 0;
     let animationProgress = 0;
     
@@ -77,7 +81,7 @@ const MatchingAnimation = () => {
       
       // Draw completed matches
       for (let i = 0; i < currentPair; i++) {
-        const start = leftNodes[i];
+        const start = sortedLeftNodes[i];
         if (start.matchedTo !== null) {
           const end = rightNodes[start.matchedTo];
           
@@ -85,15 +89,14 @@ const MatchingAnimation = () => {
           ctx.moveTo(start.x, start.y);
           ctx.lineTo(end.x, end.y);
           ctx.strokeStyle = '#D3D3D3';
-          ctx.lineWidth = 1; // Thinner lines
+          ctx.lineWidth = 1;
           ctx.stroke();
         }
       }
       
       // Draw nodes
-      [...leftNodes, ...rightNodes].forEach(node => {
+      [...sortedLeftNodes, ...rightNodes].forEach(node => {
         ctx.beginPath();
-        // Adjust node size based on screen width
         const nodeRadius = width < 640 ? 3 : 4;
         ctx.arc(node.x, node.y, nodeRadius, 0, Math.PI * 2);
         ctx.fillStyle = node.matched ? '#4CAF50' : '#2196F3';
@@ -102,7 +105,7 @@ const MatchingAnimation = () => {
       
       // Draw current matching line
       if (currentPair < leftNodeCount) {
-        const start = leftNodes[currentPair];
+        const start = sortedLeftNodes[currentPair];
         if (start.matchedTo !== null) {
           const end = rightNodes[start.matchedTo];
           const progress = Math.min(1, animationProgress);
@@ -114,11 +117,11 @@ const MatchingAnimation = () => {
             start.y + (end.y - start.y) * progress
           );
           ctx.strokeStyle = '#D3D3D3';
-          ctx.lineWidth = 1; // Thinner lines
+          ctx.lineWidth = 1;
           ctx.stroke();
           
           if (progress === 1) {
-            leftNodes[currentPair].matched = true;
+            sortedLeftNodes[currentPair].matched = true;
             rightNodes[start.matchedTo].matched = true;
             currentPair++;
             animationProgress = 0;
@@ -126,7 +129,7 @@ const MatchingAnimation = () => {
             animationProgress += 0.04;
           }
         } else {
-          currentPair++; // Skip unmatched nodes
+          currentPair++;
         }
         
         requestAnimationFrame(draw);
@@ -162,7 +165,7 @@ const MatchingAnimation = () => {
         className="w-full" 
         style={{ 
           height: `${canvasSize.height}px`,
-          maxHeight: '180px' // Prevent excessive height on very wide screens
+          maxHeight: '180px'
         }} 
       />
     </div>

@@ -43,7 +43,7 @@ function BikeList() {
   return (
     <>
       <SEO
-        title="Biking the East Coast Greenway"
+        title="biking"
         description="A 45-day journey cycling from Chapel Hill, NC to Manhattan, NY along the East Coast Greenway. Personal blog featuring travel stories, restaurant reviews, coffee shops, and breweries discovered while biking up the East Coast of the United States."
         pathname="/writing/bike-trip"
         keywords={[

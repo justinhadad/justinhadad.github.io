@@ -1,26 +1,24 @@
-// src/pages/Home.js
 import React, { useState, useEffect } from 'react';
 import Quote from '../components/Quote';
 import { quotes } from '../data/quotes';
-import SEO from '../components/SEO';  // Make sure this path matches your SEO component location
+import SEO from '../components/SEO';
 
 const Home = () => {
   const [randomQuote, setRandomQuote] = useState(null);
 
   useEffect(() => {
-    const getRandomQuote = () => {
+    // Skip setting a random quote if a bot is visiting.
+    if (!/bot|crawl|spider|google/i.test(navigator.userAgent)) {
       const randomIndex = Math.floor(Math.random() * quotes.length);
-      return quotes[randomIndex];
-    };
-
-    setRandomQuote(getRandomQuote());
+      setRandomQuote(quotes[randomIndex]);
+    }
   }, []);
 
   return (
     <>
       <SEO 
         title="Home"
-        description="Justin Hadad is a  graduate student in economic theory at the University of Oxford."
+        description="Justin Hadad is a graduate student in economic theory at the University of Oxford."
         pathname="/"
         keywords={[
           'Justin Hadad',
@@ -38,7 +36,6 @@ const Home = () => {
             <Quote {...randomQuote} />
           </div>
         )}
-        {/* Add your other Home page content here */}
       </div>
     </>
   );

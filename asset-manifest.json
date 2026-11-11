@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.fa916f6b.css",
-    "main.js": "/static/js/main.5d8cee66.js",
+    "main.css": "/static/css/main.e5b349cb.css",
+    "main.js": "/static/js/main.aa77035b.js",
     "static/media/grad.webp": "/static/media/grad.926955ffae259baab640.webp",
+    "static/media/hadad-headshot.jpeg": "/static/media/hadad-headshot.c996d8041c8835de3ad2.jpeg",
     "index.html": "/index.html",
-    "main.fa916f6b.css.map": "/static/css/main.fa916f6b.css.map",
-    "main.5d8cee66.js.map": "/static/js/main.5d8cee66.js.map"
+    "main.e5b349cb.css.map": "/static/css/main.e5b349cb.css.map",
+    "main.aa77035b.js.map": "/static/js/main.aa77035b.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa916f6b.css",
-    "static/js/main.5d8cee66.js"
+    "static/css/main.e5b349cb.css",
+    "static/js/main.aa77035b.js"
   ]
 }
